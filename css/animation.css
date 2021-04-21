@@ -1,0 +1,41 @@
+
+.header-kv img:hover {
+    filter: drop-shadow(3px 3px 10px black);
+    cursor: pointer;
+    transition: .5s ease;
+    margin: 0 0 0 20px;
+}
+.header-kv img:active {
+    filter: drop-shadow(none);
+    filter: brightness(99%);
+    transition: .3s ease;
+    margin: 1px 0 0 20px;
+}
+.header-link a:hover {
+    /*
+    background-color: rgba(0, 0, 0, 0.667);
+    */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(242, 208, 146, 1);
+    padding-top: 20px;
+    transition: .3s ease;
+}
+.header-link a:active {
+    text-shadow: none;
+    color: rgba(242, 208, 146, 1);
+    padding-top: 24px;
+    transition: .3s ease;
+}
+/*
+.header-search input:hover {
+    opacity: 0.6;
+    transition: .5s ease;
+}
+.header-search img:hover {
+    opacity: 0.67;
+    cursor: pointer;
+    padding-top: 10px;
+    transition: .3s ease;
+    -ms-transform-origin-x: 2px;
+}
+*/

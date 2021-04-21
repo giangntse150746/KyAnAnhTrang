@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Kỳ Án Ánh Trăng</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- source Linking -->
+    <link rel="icon" href="Resources/page-icon.png" type="image/icon type">
+    <link rel="stylesheet" type="text/css" href="CSS/general.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/animation.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/adapter-config.css" />
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-container" id="headerBar">
+            <div class="header-kv">
+                <img alt="mini key visual" src="source/mini-kv.png" />
+            </div>
+            <div class="header-link">
+                <a href="about-us.html">Về chúng mình</a>
+                <a href="about-movie.html">Về Kỳ Án Ánh Trăng</a>
+                <a href="#">Gửi thư cho chúng mình</a>
+            </div>
+            <!--
+            <div class="header-search">
+                <div>
+                    <input type="text" placeholder="Find something here..." />
+                </div>
+                <div>
+                    <img alt="search button" src="source/search-icon.png" />
+                </div>
+            </div>
+            -->
+        </div>
+    </header>
+
+    <div class="landing-page" onscroll="scroller()">
+        <div class="introdution">
+            <div class="background-trailer">
+                <!--
+                <img alt="background trailer" class="image" src="source/2520x1080.png" />
+                -->
+                <video class="background-video" autoplay loop muted>
+                    <source src="source/houserules.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="text">
+                <p>
+                    Nội dung chính của phim xoay quanh Huyên Linh- một cô gái
+                  mẫn tuệ, có khả năng quan sát và suy luận sắc bén.
+                </p>
+                <p>
+                    Liệu những bí ẩn quanh căn phòng 105, bản sonata ánh trăng
+                  rợn người và những cái chết kỳ bí của các cô gái trẻ hằng năm
+                  sẽ có lời giải đáp? Liệu Huyên Linh có tìm thấy công lý cho
+                  bản thân và cho cả những người mà cô yêu thương? Tất cả phải
+                  chăng sẽ theo đúng như những gì cô mong muốn?
+                </p>
+            </div>
+            <div class="button">
+                <a href="#">Xem Trailer</a>
+                <a href="#">Xem Phim</a>
+            </div>
+        </div>
+        <div class="second-part">
+            <img alt="" class="" src="source/1440x1080.png" />
+        </div>
+        <div class="third-part">
+
+        </div>
+    </div>
+
+    <div class="count-down" id="countDown"></div>
+
+    <footer>
+        <ul>
+            Contact:
+            <li id="fanpage">
+
+            </li>
+            <li id="website">
+
+            </li>
+            <li id="address">
+
+            </li>
+        </ul>
+    </footer>
+    
+    <!-- tracking field -->
+    <p id="fakeHeight"></p>
+	<p id="scrollPercentLabel" hidden>Scroll Percentage: <span>0</span>%</p>
+    <style>
+        #scrollPercentLabel {
+            font-family: Impact;
+            font-size: 50px;
+            color: #2B2B2B;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            box-shadow: 8px 8px 5px rgba(20, 20, 20, 1);
+            border-radius: 15px;
+        }
+    </style>
+</body>
+
+<script src="js/event.js" ></script>
+</html>

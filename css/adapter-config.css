@@ -1,0 +1,21 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(242, 208, 146);
+  opacity: 0.67; /* Firefox */
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(242, 208, 146, 0.67);
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(242, 208, 146, 0.67);
+}
+
+
+
+/* Responsive Config */
+/*
+@media all and screen(min-width: 720px) {
+  
+}
+*/
