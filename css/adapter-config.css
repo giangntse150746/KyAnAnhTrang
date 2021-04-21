@@ -2,16 +2,32 @@
   color: rgba(242, 208, 146);
   opacity: 0.67; /* Firefox */
 }
-  
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: rgba(242, 208, 146, 0.67);
 }
-  
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: rgba(242, 208, 146, 0.67);
 }
 
-
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(240, 240, 240, 0.3);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 15px;
+  transition: .5s ease;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  transition: .5s ease;
+}
 
 /* Responsive Config */
 /*
