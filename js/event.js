@@ -28,20 +28,6 @@ var x = setInterval(function() {
     }
   }, 1000);
 
-//change on scrolling
-function scroller() {
-  var scrollTop = $(window).scrollTop();
-  var docHeight = $(document).height();
-  var winHeight = $(window).height();
-  var scrollPercent = (scrollTop) / (docHeight - winHeight);
-
-  if (scrollPercent > 0) {
-    // Get the header bar in document.
-    var scroller = document.getElementById("headerBar");
-    scroller.setAttribute("style", "margin: 0 0 0 0; transition: .5s ease;");
-  }
-}
-
 $(document).ready(function() {
 
   $(window).scroll(function(e){
@@ -52,7 +38,7 @@ $(document).ready(function() {
     var scrollPercentRounded = Math.round(scrollPercent*100);
 
       $('#scrollPercentLabel>span').html(scrollPercentRounded);
-      if (scrollPercentRounded > 0) {
+      if (scrollPercentRounded >= 1) {
         var scroller = document.getElementById("headerBar");
         scroller.setAttribute("style", 
           `margin: 0 0 0 0;
