@@ -52,7 +52,7 @@ $(document).ready(function() {
     var scrollPercentRounded = Math.round(scrollPercent*100);
 
       $('#scrollPercentLabel>span').html(scrollPercentRounded);
-      if (scrollPercentRounded > 0) {
+      if (scrollPercentRounded >= 1) {
         var scroller = document.getElementById("headerBar");
         scroller.setAttribute("style", 
           `margin: 0 0 0 0;
