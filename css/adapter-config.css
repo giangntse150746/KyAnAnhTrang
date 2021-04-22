@@ -11,27 +11,33 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgba(240, 240, 240, 0.3);
+  background: transparent;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 15px;
-  transition: .5s ease;
 }
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-  transition: .5s ease;
+/* Mouse selection denied*/
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 /* Responsive Config */
-/*
-@media all and screen(min-width: 720px) {
-  
+
+@media all and (max-width: 980px) {
+  .introdution .text p {
+    font-size: 1.5vw;
+    line-height: 1.8vw;
+  }
 }
-*/

@@ -5,14 +5,16 @@
     left: 0;
 }
 body {
-    /*
     overflow-x: hidden;
-    */
+    overflow-y: auto;
+    background-color: rgba(18, 61, 61, 1);
 }
-a, p, h1, h2 {
+p, h1, h2 {
     font-family: Montserrat;
+    cursor: auto;
 }
 a {
+    font-family: Montserrat;
     text-decoration: none;
 }
 body {
@@ -126,46 +128,42 @@ header {
     float: left;
     position: relative;
 }
-.background-trailer img {
-    width: 100%;
-    float: left;
-    position: relative;
-    z-index: 0;
-}
 .background-trailer video {
     width: 100%;
     float: left;
     position: relative;
     z-index: -1;
 }
-.introdution .text {
+.introdution .surface-introduction {
     position: absolute;
-    width: 36%;
-    height: 200px;
-    left: 10%;
-    top: 20vw;
+    width: 36vw;
+    height: 18vw;
+    left: 10vw;
+    top: 18vw;
+}
+.surface-introduction .text {
+    width: 100%;
+    height: 13vw;
+    overflow: auto;
     color: #F2D092;
 }
-.introdution p {
+.surface-introduction .text p {
     text-align: justify;
     font-style: normal;
-    line-height: 22px;
+    line-height: 1.6vw;
     font-weight: 450;
     font-size: 1vw;
-    text-indent: 10px;
+    text-indent: 1.5vw;
     filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 1));
 }
-.introdution .button {
-    position: absolute;
-    z-index: 1;
-    width: 20%;
-    height: 60px;
-    left: 10%;
-    top: 32vw;
+.surface-introduction .button {
+    width: 100%;
+    float: left;
 }
-.introdution .button a {
-    height: 60px;
-    width: 44%;
+.surface-introduction .button a {
+    margin: 1.4vw 0 0 0;
+    height: 3vw;
+    width: 8.8vw;
     float: left;
     display: flex;
     justify-content: center;
@@ -176,13 +174,14 @@ header {
     font-size: 1vw;
     border-radius: 10vw;
     filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 1));
+    transition: .3s ease;
 }
-.introdution .button a:first-of-type {
+.surface-introduction .button a:first-of-type {
     background-color: rgba(242, 208, 146, 1);
     color: rgba(18, 61, 61, 1);
     margin-right: 12%;
 }
-.introdution .button a:last-of-type {
+.surface-introduction .button a:last-of-type {
     background-color: rgba(18, 61, 61, 1);
     color: rgba(242, 208, 146, 1);
 }
@@ -193,7 +192,7 @@ header {
     font-family: Montserrat;
     color: rgba(242, 208, 146, 1);
     font-size: 8vw;
-    margin: 700px 0 0 0;
+    margin: 760px 0 0 0;
     filter: drop-shadow(0px 5px 10px black);
     border: #ffffff;
 }
@@ -204,8 +203,9 @@ header {
 footer {
     width: 100%;
     float: left;
-    position: relative;
-    top: 1500px;
+    position: absolute;
+    top: 2000px;
     left: 0;
     color: #000;
+    background-color: rgba(242, 208, 146, 1);
 }
