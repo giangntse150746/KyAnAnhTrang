@@ -11,7 +11,15 @@
 * README.md file
 * ...
 
+### You can see more about us and our project below:
+#### [Our Fanpage](https://www.facebook.com/phimngankyananhtrang)
+#### [Our Channel](#) (not available)
+#### [Our Website](#) (not available)
+
+
 ### Connect me via:
 #### [My Facebook](https://facebook.com/mashimar.2001)
+#### [My Gmail](mailto:giangntse150746@fpt.edu.vn)
+#### [My Portfolio](https://github.com/giangntse150746)
 
 #### ©2021 by giangntse150746
