@@ -1,3 +1,12 @@
+@font-face {  
+  font-family: 'Montserrat';  
+  src: url('/source/Montserrat-Regular.ttf');
+}  
+/* Header fix */
+.header-container {
+  -webkit-backface-visibility: hidden;
+}
+
 /* Safari */
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
@@ -148,18 +157,92 @@
   }
 }
 
-@media only screen and (max-width: 360px) {
+/* Iphone 6,7,8 plus */
+@media only screen and (max-width: 414px) {
   body {
-    max-width: 720px;
+    width: 414px;
     float: none;
   }
+
   header {
-    width: 720px;
+    width: 414px;
   }
   .landing-page {
-    width: 720px;
+    width: 414px;
   }
   footer {
-    width: 720px;
+    width: 414px;
+  }
+}
+
+/* Pixel, Pixel XL */
+@media only screen and (max-width: 411px) {
+  body {
+    width: 411px;
+    float: none;
+  }
+
+  header {
+    width: 411px;
+  }
+  .landing-page {
+    width: 411px;
+  }
+  footer {
+    width: 411px;
+  }
+}
+
+/* Iphone 6,7,8 */
+@media only screen and (max-width: 375px) {
+  body {
+    width: 375px;
+    float: none;
+  }
+
+  header {
+    width: 375px;
+  }
+  .landing-page {
+    width: 375px;
+  }
+  footer {
+    width: 375px;
+  }
+}
+
+/* Samsung Galaxy S5 */
+@media only screen and (max-width: 360px) {
+  body {
+    width: 360px;
+    float: none;
+  }
+
+  header {
+    width: 360px;
+  }
+  .landing-page {
+    width: 360px;
+  }
+  footer {
+    width: 360px;
+  }
+}
+
+/* thay đt hộ em */
+@media only screen and (max-width: 320px) {
+  body {
+    width: 320px;
+    float: none;
+  }
+
+  header {
+    width: 320px;
+  }
+  .landing-page {
+    width: 320px;
+  }
+  footer {
+    width: 320px;
   }
 }

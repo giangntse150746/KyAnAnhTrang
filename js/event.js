@@ -53,31 +53,20 @@ $(window).resize(function() {
 });
 
 function changeHeaderBar() {
-  var link = document.getElementById("headerLink");
-  var menu = document.getElementById("headerMenu");
   //var trailer = document.getElementById("backgroundTrailer");
-  if (windowsize < 360) {
+  if (windowsize < 320) {
     openBruh();
+  } else if (windowsize = 320) {
+    
+    switchToMenu();
+  } else if (windowsize <= 540) {
+    closeBruh();
+    switchToMenu();
   } else if (windowsize <= 720) {
     closeBruh();
-    link.setAttribute("style", `
-        visibility: hidden;
-    `);
-    menu.setAttribute("style", `
-        visibility: visible;
-        width: 70px;
-        height: 70px;
-    `);
+    switchToMenu();
   } else {
-    closeBruh();
-    menu.setAttribute("style", `
-        visibility: hidden;
-        width: 0;
-        height: 0;
-    `);
-    link.setAttribute("style", `
-        visibility: visible;
-    `);
+    switchToLink();
     closeNav();
   }
 }
@@ -151,7 +140,6 @@ $(document).ready(function() {
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
 }
-
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
@@ -160,7 +148,32 @@ function closeNav() {
 function openBruh() {
   document.getElementById("bruh").style.width = "100%";
 }
-
 function closeBruh() {
   document.getElementById("bruh").style.width = "0%";
+}
+
+/* Navigation Bruh Controller */
+function openBruh() {
+  document.getElementById("changePhone").style.width = "100%";
+}
+function closeBruh() {
+  document.getElementById("changePhone").style.width = "0%";
+}
+
+/* Switch headerBar */
+function switchToMenu() {
+  document.getElementById("headerLink").style.visibility = "hidden";
+  document.getElementById("headerMenu").style = `
+        visibility: visible;
+        width: 70px;
+        height: 70px;
+  `;
+}
+function switchToLink() {
+  document.getElementById("headerLink").style.visibility = "visible";
+  document.getElementById("headerMenu").style = `
+        visibility: hidden;
+        width: 0;
+        height: 0;
+  `;
 }
