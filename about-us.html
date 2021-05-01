@@ -25,26 +25,59 @@
 </head>
 
 <body>
+    <div id="loader-container">
+        <div class="loader" id="loaderBar"></div>
+    </div>
+    
     <header id="header">
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="about-us.html">
+                    Về chúng mình
+                </a>
+                <a href="about-movie.html">
+                    Về Kỳ Án Ánh Trăng
+                </a>
+                <a href="https://forms.gle/1im48pEhcsmyk7dr6" target="_blank">
+                    Gửi thư cho chúng mình
+                </a>
+            </div>
+        </div>
         <div class="header-container" id="headerBar">
             <div class="header-kv">
-                <img alt="mini key visual" src="source/kvwhite.png" />
+                <img alt="mini key visual" src="source/mini-kv.png"/>
             </div>
-            <div class="header-link">
-                <a href="about-us.html">Về chúng mình</a>
-                <a href="about-movie.html">Về Kỳ Án Ánh Trăng</a>
-                <a href="#">Gửi thư cho chúng mình</a>
+            <div class="header-menu" id="headerMenu">
+                <span style="
+                            font-size:45px;
+                            cursor:pointer;
+                            z-index: 100;
+                            color: rgba(242, 208, 146, 1);
+
+                            " 
+                        onclick="openNav()">
+                    &#9776;
+                </span>
+                <img alt="menu icon right" src="source/menu-icon-f2d092.png" hidden>
             </div>
-            <!--
-            <div class="header-search">
+            <div class="header-link" id="headerLink">
                 <div>
-                    <input type="text" placeholder="Find something here..." />
+                    <a href="about-us.html">
+                        Về chúng mình
+                    </a>
                 </div>
                 <div>
-                    <img alt="search button" src="source/search-icon.png" />
+                    <a href="about-movie.html">
+                        Về Kỳ Án Ánh Trăng
+                    </a>
+                </div>
+                <div>
+                    <a href="https://forms.gle/1im48pEhcsmyk7dr6" target="_blank">
+                        Gửi thư cho chúng mình
+                    </a>
                 </div>
             </div>
-            -->
         </div>
     </header>
 

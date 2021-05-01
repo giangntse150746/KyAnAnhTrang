@@ -5,7 +5,7 @@
     <!-- basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
     <!-- mobile metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,44 +16,78 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- source Linking -->
-    <link rel="icon" href="Resources/page-icon.png" type="image/icon type">
-    <link rel="stylesheet" type="text/css" href="giangntse150746.github.io/KyAnAnhTrang/css/general.css">
-    <link rel="stylesheet" type="text/css" href="giangntse150746.github.io/KyAnAnhTrang/css/animation.css">
-    <link rel="stylesheet" type="text/css" href="giangntse150746.github.io/KyAnAnhTrang/css/adapter-config.css">
+    <link rel="icon" href="source/mini-kv.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="CSS/general.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/animation.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/adapter-config.css" />
+        <!--
+    <link rel="stylesheet" type="text/css" href="CSS/loader.css" />
+        -->
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
+    <div id="loader-container">
+        <div class="loader" id="loaderBar"></div>
+    </div>
+    
     <header id="header">
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="about-us.html">
+                    Về chúng mình
+                </a>
+                <a href="about-movie.html">
+                    Về Kỳ Án Ánh Trăng
+                </a>
+                <a href="https://forms.gle/1im48pEhcsmyk7dr6" target="_blank">
+                    Gửi thư cho chúng mình
+                </a>
+            </div>
+        </div>
         <div class="header-container" id="headerBar">
             <div class="header-kv">
-                <img alt="mini key visual" src="source/mini-kv.png" />
+                <img alt="mini key visual" src="source/mini-kv.png"/>
             </div>
-            <div class="header-link">
-                <a href="about-us.html">Về chúng mình</a>
-                <a href="about-movie.html">Về Kỳ Án Ánh Trăng</a>
-                <a href="#">Gửi thư cho chúng mình</a>
+            <div class="header-menu" id="headerMenu">
+                <span style="
+                            font-size:45px;
+                            cursor:pointer;
+                            z-index: 100;
+                            color: rgba(242, 208, 146, 1);
+
+                            " 
+                        onclick="openNav()">
+                    &#9776;
+                </span>
+                <img alt="menu icon right" src="source/menu-icon-f2d092.png" hidden>
             </div>
-            <!--
-            <div class="header-search">
+            <div class="header-link" id="headerLink">
                 <div>
-                    <input type="text" placeholder="Find something here..." />
+                    <a href="about-us.html">
+                        Về chúng mình
+                    </a>
                 </div>
                 <div>
-                    <img alt="search button" src="source/search-icon.png" />
+                    <a href="about-movie.html">
+                        Về Kỳ Án Ánh Trăng
+                    </a>
+                </div>
+                <div>
+                    <a href="https://forms.gle/1im48pEhcsmyk7dr6" target="_blank">
+                        Gửi thư cho chúng mình
+                    </a>
                 </div>
             </div>
-            -->
         </div>
     </header>
 
     <div class="landing-page" onscroll="scroller()">
         <div class="introdution">
-            <div class="background-trailer">
-                <!--
-                <img alt="background trailer" class="image" src="source/2520x1080.png" />
-                -->
+            <div class="background-trailer" id="backgroundTrailer">
                 <video class="background-video" autoplay loop muted>
                     <source src="source/houserules.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -79,49 +113,96 @@
                 </div>
             </div>
         </div>
-        <div class="second-part">
-            
+        <div class="characters">
+            <div class="character-information" id="characterInfo"></div>
+            <div class="characters-preview">
+                <div class="first-area">
+                    <div>
+                        <img src="source/characters/preview-HuyenLinh.png"/>
+                    </div>
+                    <div>
+                        <img src="source/characters/preview-TranDong.png"/>
+                    </div>
+                    <div>
+                        <img src="source/characters/preview-AnNhien.png"/>
+                    </div>
+                    <div>
+                        <img src="source/characters/preview-NguoiGia.png"/>
+                    </div>
+                </div>
+                <div class="second-area">
+                    <div>
+                        <img src="source/characters/preview-TruongLam.png"/>
+                    </div>
+                    <div>
+                        <img src="source/characters/preview-HaVi.png"/>
+                    </div>
+                    <div>
+                        <img src="source/characters/preview-BaoTran.png"/>
+                    </div>
+                    <div>
+                        <img src="source/characters/preview-HuyenKhanh.png"/>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="third-part">
+        <div class="awards">
+            <div class="awards-overview">
+                <h1>
+                    Giải Thưởng
+                </h1>
+                <p>
+                    MOVE WITH DRAMAS là sự kiện đánh dấu sự trưởng thành của toàn thể ekip, 
+                    đồng thời ghi nhận những thành công mà Phim ngắn: Kỳ Án Ánh Trăng 
+                    đạt được.
+                </p>
+            </div>
+            <div class="awards-image">
 
+            </div>
+            <div>
+                <p>
+                    Dù còn nhiều sai xót nhưng công sức của toàn thể Lưu Ly Sản Xuất đội 
+                    đã được ghi nhận. Tiếp thêm động lực cho chúng mình chỉnh chu sản phẩm 
+                    công chiếu Online cuối cùng.<br/>
+                    Tuy là sản phẩm đầu tay, không tránh khỏi nhiều sai lầm. Nhưng được mọi 
+                    người đánh giá cao và công nhận thực sự chính là điều tuyệt vời nhất. 
+                </p>
+            </div>
         </div>
     </div>
 
-    <div class="count-down" id="countDown"></div>
-
     <footer>
-        <ul>
-            Contact:
-            <li id="fanpage">
+        <div class="contact-info" id="contact">
+            <h2>
+                LIÊN HỆ VỚI CHÚNG MÌNH | CONTACT US
+            </h2>
+            <div class="footer-link">
 
-            </li>
-            <li id="website">
-
-            </li>
-            <li id="address">
-
-            </li>
-        </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>
+                ©2021 LƯU LY SẢN XUẤT ĐỘI. ALL RIGHTS RESERVED<br/>
+                All trademarks referenced herein are the properties 
+                of their respective owners.
+            </p>
+        </div>
     </footer>
     
     <!-- tracking field -->
     <p id="fakeHeight"></p>
-	<p id="scrollPercentLabel" hidden>Scroll Percentage: <span>0</span>%</p>
-    <style>
-        #scrollPercentLabel {
-            font-family: Impact;
-            font-size: 50px;
-            color: #2B2B2B;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            box-shadow: 8px 8px 5px rgba(20, 20, 20, 1);
-            border-radius: 15px;
-        }
-    </style>
+    
+    <div class="count-down" id="countDown"></div>
+
+    <div class="something-bruh" id="bruh">
+        <p>
+          Ngưng thu nhỏ cái màn hình lại giúp tui.<br/>
+          Trò này hong có vui đâu!!!
+        </p>
+    </div>
 </body>
 
 <script src="js/event.js" ></script>
+
 </html>

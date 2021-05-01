@@ -1,11 +1,24 @@
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(242, 208, 146);
   opacity: 0.67; /* Firefox */
 }
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
   color: rgba(242, 208, 146, 0.67);
 }
-::-ms-input-placeholder { /* Microsoft Edge */
+::-ms-input-placeholder {
+  /* Microsoft Edge */
   color: rgba(242, 208, 146, 0.67);
 }
 
@@ -25,19 +38,128 @@
 /* Mouse selection denied*/
 * {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                          supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Navigation Menu */
+@media all and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
 }
 
 /* Responsive Config */
 
-@media all and (max-width: 980px) {
-  .introdution .text p {
+@media all and (max-width: 1200px) {
+  /* Header */
+  .header-kv {
+    width: 12%;
+    transition: 0.1s ease;
+  }
+  .header-link {
+    width: 88%;
+    transition: 0.1s ease;
+  }
+  .header-link a {
     font-size: 1.5vw;
+  }
+  .header-link a:last-of-type {
+    margin-right: 10px;
+  }
+
+  .background-trailer video {
+    width: 1200px;
+    float: center;
+    transition: 0.3s ease;
+  }
+  .introdution .surface-introduction {
+    position: absolute;
+    width: 36vw;
+    height: 180px;
+    left: 10vw;
+    top: 240px;
+  }
+  .surface-introduction .text {
+    width: 100%;
+    height: 14vw;
+    overflow: auto;
+    color: #f2d092;
+  }
+  .surface-introduction .text p {
     line-height: 1.8vw;
+    font-weight: 450;
+    font-size: 1.5vw;
+    transition: .5s ease;
+  }
+  .surface-introduction .button a {
+    margin: 1.4vw 0 0 0;
+    height: 3vw;
+    width: 8.8vw;
+    font-weight: 500;
+    font-size: 1vw;
+    border-radius: 10vw;
+    transition: 0.3s ease;
+  }
+}
+
+@media all and (max-width: 720px) {
+  /* Header */
+  .header-kv {
+    width: 20%;
+    transition: 0.1s ease;
+  }
+  .header-link a {
+    transition: none;
+  }
+  .introdution .surface-introduction {
+    width: 40vw;
+    height: 240px;
+    left: 10vw;
+    top: 180px;
+  }
+  .surface-introduction .text {
+    width: 100%;
+    height: 180px;
+    overflow: auto;
+    color: #f2d092;
+  }
+  .surface-introduction .text p {
+    line-height: 18px;
+    font-weight: 450;
+    font-size: 16px;
+    transition: .5s ease;
+  }
+  .surface-introduction .button a {
+    margin: 2vw 0 0 0;
+    height: 5vw;
+    width: 12vw;
+    font-weight: 500;
+    font-size: 1vw;
+    border-radius: 10vw;
+    transition: 0.3s ease;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  body {
+    max-width: 720px;
+    float: none;
+  }
+  header {
+    width: 720px;
+  }
+  .landing-page {
+    width: 720px;
+  }
+  footer {
+    width: 720px;
   }
 }
