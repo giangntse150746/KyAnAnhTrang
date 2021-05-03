@@ -1,10 +1,10 @@
 /* Alerts Controller */
 function onLoadAlert(){
   swal({
-    title: "Good job!",
-    text: "You clicked the button!",
-    icon: "success",
-    button: "Aww yiss!",
+    title: "Warning",
+    text: "",
+    icon: "failed",
+    button: "OK",
   });
 }
 
@@ -53,17 +53,17 @@ $(window).resize(function() {
 });
 
 function changeHeaderBar() {
-  //var trailer = document.getElementById("backgroundTrailer");
-  if (windowsize < 320) {
-    openBruh();
-  } else if (windowsize = 320) {
-    
-    switchToMenu();
-  } else if (windowsize <= 540) {
-    closeBruh();
-    switchToMenu();
+  
+  if (windowsize <= 540) {
+    if (windowsize < 320) {
+      openBruh();
+    } else if (windowsize < 360) {
+      openChangePhone();
+    } else {
+      closeBruh();
+      switchToMenu();
+    }
   } else if (windowsize <= 720) {
-    closeBruh();
     switchToMenu();
   } else {
     switchToLink();
@@ -146,18 +146,28 @@ function closeNav() {
 
 /* Navigation Bruh Controller */
 function openBruh() {
+  document.getElementById("bruh").innerHTML=`
+        <p>
+          Ngưng thu nhỏ cái màn hình lại giúp tui.<br/>
+          Trò này hong có vui đâu!!!
+        </p>
+  `;
   document.getElementById("bruh").style.width = "100%";
 }
 function closeBruh() {
   document.getElementById("bruh").style.width = "0%";
 }
 
-/* Navigation Bruh Controller */
-function openBruh() {
-  document.getElementById("changePhone").style.width = "100%";
-}
-function closeBruh() {
-  document.getElementById("changePhone").style.width = "0%";
+/* Navigation changePhone Controller */
+function openChangePhone() {
+  swal({
+    title: "Cảnh báo",
+    text: `Thiết bị của bạn có kích thước quá nhỏ
+            Hãy sử dụng một màn hình lớn hơn để có trải nghiệm tốt nhất`,
+    button: "OK",
+    closeOnEsc: false,
+    timer: 10000
+  });
 }
 
 /* Switch headerBar */

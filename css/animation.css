@@ -25,6 +25,31 @@
     transition: .5s ease;
 }
 
+/* Alert */
+.swal-title {
+    font-family: Montserrat;
+    margin: 0px;
+    font-size: 36px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+    margin-bottom: 28px;
+}
+.swal-text {
+    font-family: Montserrat;
+    padding: 17px;
+    display: block;
+    margin: 22px;
+    font-size: 24px;
+    text-align: center;
+    color: #61534e;
+}
+.swal-button {
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 24px;
+    background-color: rgba(242, 208, 146, 1);
+    color: rgba(18, 61, 61, 1);
+}
+
 /* Handle on hover scrollbar */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;

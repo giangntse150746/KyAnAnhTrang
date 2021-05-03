@@ -297,13 +297,27 @@ header {
 .something-bruh {
     width: 0%;
     height: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     position: absolute;
     z-index: 1001;
     background-color: #818181;
 }
 .something-bruh p {
     font-size: 60px;
+    text-transform: uppercase;
+    color: rgba(242, 208, 146, 1);
+}
+.change-bruh {
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1001;
+    background-color: #818181;
+}
+.change-bruh p {
+    font-size: 60px;
+    text-align: center;
     text-transform: uppercase;
     color: rgba(242, 208, 146, 1);
 }
@@ -314,8 +328,17 @@ footer {
     float: left;
     height: 320px;
     position: absolute;
-    top: 2700px;
+    top: 2800px;
     left: 0;
     color: #000;
     background-color: rgba(242, 208, 146, 1);
+    text-align: center;
+}
+.contact-info {
+    width: 100%;
+    float: left;
+}
+.footer-copyright {
+    width: 100%;
+    float: left;
 }
