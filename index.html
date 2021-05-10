@@ -10,20 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <!-- site metas -->
-    <title>Kỳ Án Ánh Trăng</title>
+    <title>Kỳ Án Ánh Trăng - Homepage</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- source Linking -->
     <link rel="icon" href="source/mini-kv.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="CSS/general.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/animation.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/adapter-config.css" />
-        <!--
-    <link rel="stylesheet" type="text/css" href="CSS/loader.css" />
-        -->
+    <link rel="stylesheet" type="text/css" href="CSS/general.css">
+    <link rel="stylesheet" type="text/css" href="CSS/specific/landing.css">
+    <link rel="stylesheet" type="text/css" href="CSS/animation.css">
+    <link rel="stylesheet" type="text/css" href="CSS/adapter-config.css">
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='js/jquery-mousewheel.min.js'></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
@@ -34,22 +33,27 @@
     
     <header id="header">
         <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" id="closeBtn" 
+                class="closebtn" onclick="closeNav()">
+                &times;
+            </a>
             <div class="overlay-content">
-                <a href="about-us.html">
+                <a href="about-us.html" class="effect-underline">
                     Về chúng mình
                 </a>
-                <a href="about-movie.html">
+                <a href="about-movie.html" class="effect-underline">
                     Về Kỳ Án Ánh Trăng
                 </a>
-                <a href="https://forms.gle/1im48pEhcsmyk7dr6" target="_blank">
-                    Gửi thư cho chúng mình
+                <a href="FAQs.html" class="effect-underline">
+                    Những Câu Hỏi Thường Gặp
                 </a>
             </div>
         </div>
         <div class="header-container" id="headerBar">
             <div class="header-kv">
-                <img alt="mini key visual" src="source/mini-kv.png"/>
+                <img alt="mini kv" id="HomepageKV" 
+                    src="source/mini-kv.png" 
+                    onclick="goToHomepage()">
             </div>
             <div class="header-menu" id="headerMenu">
                 <span style="
@@ -62,7 +66,6 @@
                         onclick="openNav()">
                     &#9776;
                 </span>
-                <img alt="menu icon right" src="source/menu-icon-f2d092.png" hidden>
             </div>
             <div class="header-link" id="headerLink">
                 <div>
@@ -76,17 +79,17 @@
                     </a>
                 </div>
                 <div>
-                    <a href="https://forms.gle/1im48pEhcsmyk7dr6" target="_blank">
-                        Gửi thư cho chúng mình
+                    <a href="FAQs.html">
+                        Những Câu Hỏi Thường Gặp
                     </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="landing-page" onscroll="scroller()">
+    <div class="landing-page" onscroll="scroller()" id="landingContainer">
         <div class="introdution">
-            <div class="background-trailer" id="backgroundTrailer">
+            <div class="background-teaser" id="backgroundTrailer">
                 <video class="background-video" autoplay loop muted>
                     <source src="source/houserules.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -107,40 +110,85 @@
                     </p>
                 </div>
                 <div class="button">
-                    <a href="#">Xem Trailer</a>
-                    <a href="#">Xem Phim</a>
+                    <a href="film-view.html?view=trailer">Xem Trailer</a>
+                    <a href="film-view.html?view=fullfilm">Xem Phim</a>
                 </div>
             </div>
         </div>
         <div class="characters">
             <div class="character-information" id="characterInfo"></div>
             <div class="characters-preview">
+                <style>
+                    span.popup-text {
+                        color: #123d3d; 
+                        font-weight: 600;
+                    }
+                    .smaller-text {
+                        font-size: 12px;
+                        color: rgb(255, 51, 0);
+                        font-weight: 800;
+                    }
+                </style>
                 <div class="first-area">
-                    <div>
-                        <img src="source/characters/preview-HuyenLinh.png"/>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
+                        <img src="source/characters/preview-HuyenLinh.png">
+                        <span class="popup-text">
+                            Huyên Linh
+                            <span class="smaller-text glowing" hidden>&lt;HOT&gt;</span>
+                        </span>
                     </div>
-                    <div>
-                        <img src="source/characters/preview-TranDong.png"/>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
+                        <img src="source/characters/preview-TranDong.png">
+                        <span class="popup-text">
+                            Trần Đông
+                        </span>
                     </div>
-                    <div>
-                        <img src="source/characters/preview-AnNhien.png"/>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
+                        <img src="source/characters/preview-AnNhien.png">
+                        <span class="popup-text">
+                            An Nhiên
+                        </span>
                     </div>
-                    <div>
-                        <img src="source/characters/preview-NguoiGia.png"/>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
+                        <img src="source/characters/preview-NguoiGia.png">
+                        <span class="popup-text">
+                            Người Già
+                        </span>
                     </div>
                 </div>
                 <div class="second-area">
-                    <div>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
                         <img src="source/characters/preview-TruongLam.png"/>
+                        <span class="popup-text">
+                            Trương Lãm
+                        </span>
                     </div>
-                    <div>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
                         <img src="source/characters/preview-HaVi.png"/>
+                        <span class="popup-text">
+                            Hạ Vi
+                            <span class="smaller-text glowing" hidden>&lt;HOT&gt;</span>
+                        </span>
                     </div>
-                    <div>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
                         <img src="source/characters/preview-BaoTran.png"/>
+                        <span class="popup-text">
+                            Bảo Trân
+                        </span>
                     </div>
-                    <div>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
                         <img src="source/characters/preview-HuyenKhanh.png"/>
+                        <span class="popup-text">
+                            Huyền Khanh
+                        </span>
                     </div>
                 </div>
             </div>
@@ -148,8 +196,9 @@
         <div class="awards">
             <div class="awards-overview">
                 <h1>
-                    Giải Thưởng
+                    Giải Thưởng của Phim
                 </h1>
+                <div class="bruh-line"></div>
                 <p>
                     MOVE WITH DRAMAS là sự kiện đánh dấu sự trưởng thành của toàn thể ekip, 
                     đồng thời ghi nhận những thành công mà Phim ngắn: Kỳ Án Ánh Trăng 
@@ -157,11 +206,19 @@
                 </p>
             </div>
             <div class="awards-image">
-
+                <div>
+                    <img alt="1st Vote Rating" src="/source/awards/vote-1st.png">
+                </div>
+                <div>
+                    <img alt="1st Multimedia" src="/source/awards/multimedia-1st.png">
+                </div>
+                <div>
+                    <img alt="1st Script Story" src="/source/awards/script-1st.png">
+                </div>
             </div>
-            <div>
+            <div class="awards-describe">
                 <p>
-                    Dù còn nhiều sai xót nhưng công sức của toàn thể Lưu Ly Sản Xuất đội 
+                    Dù còn nhiều sai sót nhưng công sức của toàn thể Lưu Ly Sản Xuất đội 
                     đã được ghi nhận. Tiếp thêm động lực cho chúng mình chỉnh chu sản phẩm 
                     công chiếu Online cuối cùng.<br/>
                     Tuy là sản phẩm đầu tay, không tránh khỏi nhiều sai lầm. Nhưng được mọi 
@@ -171,26 +228,41 @@
         </div>
     </div>
 
-    <footer>
-        <div class="contact-info" id="contact">
-            <h2>
-                LIÊN HỆ VỚI CHÚNG MÌNH | CONTACT US
-            </h2>
-            <div class="footer-link">
+    <div class="chat-with-us">
+        <a href="https://m.me/101227502022397" target="_blank">
+            <img alt="Messenger Chat" src="source/messenger-flipped-recolored-2.png">
+        </a>
+    </div>
 
+    <footer>
+        <div class="footer-wrap">
+            <div class="contact-info" id="contact">
+                <h2>
+                    LIÊN HỆ VỚI CHÚNG MÌNH | CONTACT US
+                </h2>
+                <div class="footer-icon">
+                    <a href="https://www.facebook.com/phimngankyananhtrang" target="_blank">
+                        <img alt="Facebook Fanpage" src="source/facebook.png">
+                    </a>
+                    <a href="https://www.youtube.com/c/PhimngắnKỳÁnÁnhTrăng" target="_blank">
+                        <img alt="Youtube Channel" src="source/youtube.png">
+                    </a>
+                    <a href="mailto:phimngankyananhtrang@gmail.com" target="_blank">
+                        <img alt="Gmail FAQs" src="source/mail.png">
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="footer-copyright">
-            <p>
-                ©2021 LƯU LY SẢN XUẤT ĐỘI. ALL RIGHTS RESERVED<br/>
-                All trademarks referenced herein are the properties 
-                of their respective owners.
-            </p>
+            <div class="footer-copyright">
+                <p>
+                    ©2021 LƯU LY SẢN XUẤT ĐỘI. ALL RIGHTS RESERVED<br/>
+                    All trademarks referenced herein are the properties 
+                    of their respective owners.
+                </p>
+            </div>
         </div>
     </footer>
     
     <!-- tracking field -->
-    <p id="fakeHeight"></p>
     <div class="something-bruh" id="bruh"></div>
     <!--<div class="count-down" id="countDown"></div>-->
 </body>

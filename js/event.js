@@ -9,8 +9,8 @@ function onLoadAlert(){
 }
 
 /************************************************************** */
-
-/* Set Counting-down Date */
+/*
+// Set Counting-down Date
 var countDownDate = new Date("May 2, 2021 20:00:00").getTime();
 
 // Update the count down every 1 second
@@ -39,7 +39,7 @@ var x = setInterval(function() {
     document.getElementById("countDown").innerHTML = "EXPIRED";
   }
 }, 1000);
-
+*/
 /************************************************************** */
 
 /* Get Windows Size */
@@ -53,14 +53,15 @@ $(window).resize(function() {
 });
 
 function changeHeaderBar() {
-  
   if (windowsize <= 540) {
-    if (windowsize < 320) {
+    if (windowsize < 280) {
+      closeSwal();
       openBruh();
-    } else if (windowsize < 360) {
+    }  else if (windowsize < 360) {
       openChangePhone();
-    } else {
       closeBruh();
+    } else {
+      closeSwal();
       switchToMenu();
     }
   } else if (windowsize <= 720) {
@@ -91,6 +92,12 @@ $(document).ready(function() {
   }
   /*********/
 
+  /* Customize Wheel's Range */
+//  $('html, body').mousewheel(function(e, delta) {
+//    this.scrollTop -= (delta*840);
+//    e.preventDefault();
+//  });
+
   /* Loader Controller */
   setTimeout(fadeOutLoader, 0);
   setTimeout(closeLoader, 1000);
@@ -106,7 +113,7 @@ $(document).ready(function() {
   /*********/
 
   /* Scroll Controller */
-  $(window).scroll(function(e){
+  $(window).scroll(function(e) {
     var scrollTop = $(window).scrollTop();
     var docHeight = $(document).height();
     var winHeight = $(window).height();
@@ -114,20 +121,23 @@ $(document).ready(function() {
     var scrollPercentRounded = Math.round(scrollPercent*100);
 
       $('#scrollPercentLabel>span').html(scrollPercentRounded);
-      if (scrollPercent > 0) {
+      if (scrollPercentRounded > 0) {
         var scroller = document.getElementById("headerBar");
         scroller.setAttribute("style", 
           `margin: 0 0 0 0;
            width: 100%;
            border-radius: 0;
            transition: .5s ease;
+           filter: drop-shadow(0 10px 20px rgb(0, 0, 0, 0.75));
           `);
+        $('#myNav')
       } else {
         var scroller = document.getElementById("headerBar");
         scroller.setAttribute("style", 
           `margin: 100px 0 0 0; 
            transition: .5s ease;
            width: 80%;
+           filter: drop-shadow(0 5px 10px rgb(0, 0, 0, 0.67));
           `);
       }
   });
@@ -159,6 +169,15 @@ function closeBruh() {
 }
 
 /* Navigation changePhone Controller */
+function openNoSupport() {
+  swal({
+    title: "Cảnh báo",
+    text: `Thiết bị này không được hỗ trợ để duyệt trang web này`,
+    button: "OK",
+    closeOnEsc: false,
+    timer: 5000
+  });
+}
 function openChangePhone() {
   swal({
     title: "Cảnh báo",
@@ -166,8 +185,11 @@ function openChangePhone() {
             Hãy sử dụng một màn hình lớn hơn để có trải nghiệm tốt nhất`,
     button: "OK",
     closeOnEsc: false,
-    timer: 10000
+    timer: 5000
   });
+}
+function closeSwal() {
+  swal.close();
 }
 
 /* Switch headerBar */
@@ -185,5 +207,75 @@ function switchToLink() {
         visibility: hidden;
         width: 0;
         height: 0;
+  `;
+}
+
+/* Back and Home Controller */
+function previousPage() {
+  window.history.back();
+}
+function goToHomepage() {
+  setTimeout(function() {
+    window.location = "/";
+  }, 300);
+}
+
+/* Alert||Log Area */
+function printCurrentLocation() {
+  alert('Current location is: ' + window.location.href);
+}
+
+/* Location Controller */
+function getCurrentLocation() {
+  return new String(window.location.href);
+}
+function getParameters(str) {
+  var url = str.split("?");
+  var params = url[1].split("&");
+  return params;
+}
+
+/* On Hover Controller */
+function openPopUp(popContainer) {
+  var popup = popContainer.getElementsByTagName("span");
+  popup[0].classList.remove("hide");
+  popup[0].classList.add("show");
+}
+function closePopUp(popContainer) {
+  var popup = popContainer.getElementsByTagName("span");
+  popup[0].classList.remove("show");
+  popup[0].classList.add("hide");
+}
+
+/* On Click Controller */
+function delayClick() {
+  setTimeout(function(){return;}, 5000);
+}
+
+/* View Film Controller */
+function viewFullFilm() {
+  document.getElementById("iframeView").innerHTML=`
+    <iframe width="960" height="540" id="iframeFilm"
+      src="https://www.youtube.com/embed/AF9ubNnnEtg?start=001;rel=0&amp;loop=1" 
+      title="Full Film" frameborder="1" 
+      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' 
+      allowfullscreen>
+    </iframe>
+  `;
+  document.getElementById("switchIframeButton").innerHTML=`
+    <a href="film-view.html?view=trailer">Xem Trailer</a>
+  `;
+}
+function viewTrailer() {
+  document.getElementById("iframeView").innerHTML=`
+    <iframe width="960" height="540" id="iframeTrailer"
+        src="https://www.youtube.com/embed/llxrT4J2wZ4?start=001;rel=0&amp;loop=1" 
+        title="Trailer Official" frameborder="" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+  `;
+  document.getElementById("switchIframeButton").innerHTML=`
+    <a href="film-view.html?view=fullfilm">Xem Phim</a>
   `;
 }

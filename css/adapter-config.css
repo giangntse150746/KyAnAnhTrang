@@ -4,17 +4,8 @@
 }  
 /* Header fix */
 .header-container {
-  -webkit-backface-visibility: hidden;
-}
-
-/* Safari */
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Safari */
 }
 
 ::placeholder {
@@ -83,7 +74,7 @@
     margin-right: 10px;
   }
 
-  .background-trailer video {
+  .background-teaser video {
     width: 1200px;
     float: center;
     transition: 0.3s ease;
@@ -118,6 +109,32 @@
   }
 }
 */
+@media all and (max-width: 1600px) {
+  .footer-icon {
+    width: 36%;
+    margin: 0 32%;
+  }
+}
+
+@media all and (max-width: 1440px) {
+  .header-link a {
+    font-size: 100%;
+  }
+  .footer-icon {
+    width: 40%;
+    margin: 0 30%;
+  }
+}
+
+@media all and (max-width: 1080px) {
+  .header-link a {
+    font-size: 100%;
+  }
+  .footer-icon {
+    width: 40%;
+    margin: 0 30%;
+  }
+}
 
 @media all and (max-width: 720px) {
   /* Header */
@@ -155,6 +172,29 @@
     border-radius: 10vw;
     transition: 0.3s ease;
   }
+  .footer-icon {
+    width: 50%;
+    margin: 0 25%;
+  }
+}
+
+/* Surface Duo */
+@media only screen and (max-width: 540px) {
+  body {
+    width: 540px;
+    float: none;
+  }
+
+  header {
+    width: 540px;
+  }
+  .landing-page {
+    width: 540px;
+  }
+  footer {
+    width: 540px;
+    font-size: medium;
+  }
 }
 
 /* Iphone 6,7,8 plus */
@@ -172,6 +212,7 @@
   }
   footer {
     width: 414px;
+    font-size: smaller;
   }
 }
 
@@ -190,6 +231,7 @@
   }
   footer {
     width: 411px;
+    font-size: smaller;
   }
 }
 
@@ -208,6 +250,7 @@
   }
   footer {
     width: 375px;
+    font-size: x-small;
   }
 }
 
@@ -226,7 +269,9 @@
   }
   footer {
     width: 360px;
+    font-size: x-small;
   }
+
 }
 
 /* thay đt hộ em */
@@ -244,5 +289,6 @@
   }
   footer {
     width: 320px;
+    font-size: x-small;
   }
 }

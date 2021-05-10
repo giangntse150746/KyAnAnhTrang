@@ -10,15 +10,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <!-- site metas -->
-    <title>Về Chúng Mình</title>
+    <title>Kỳ Án Ánh Trăng - Xem</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- source Linking -->
     <link rel="icon" href="source/mini-kv.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="CSS/general.css">
+    <link rel="stylesheet" type="text/css" href="CSS/specific/film-view.css">
     <link rel="stylesheet" type="text/css" href="CSS/animation.css">
     <link rel="stylesheet" type="text/css" href="CSS/adapter-config.css">
+    <style>
+        body {
+            height: 937px;
+        }
+        footer {
+            top: 938px;
+        }
+    </style>
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -56,7 +65,6 @@
                             cursor:pointer;
                             z-index: 100;
                             color: rgba(242, 208, 146, 1);
-
                             " 
                         onclick="openNav()">
                     &#9776;
@@ -82,9 +90,9 @@
         </div>
     </header>
 
-    <div class="nothing" onscroll="scroller()">
-        Trang này hiện méo có gì cạ.<br/>
-        <a href="index.html">Quay về thoiii...</a>
+    <div class="iframe-container" id="iframeContainer">
+        <div class="iframe-view" id="iframeView"></div>
+        <div class="button" id="switchIframeButton"></div>
     </div>
 
     <div class="chat-with-us">
@@ -124,4 +132,17 @@
 </body>
 
 <script src="js/event.js" ></script>
+<script>
+    var firstParam = new Array(getParameters(getCurrentLocation()))[0];
+    if (firstParam != null) {
+        var view = new String(firstParam).split("=");
+        if (view[1] == "trailer") {
+            viewTrailer();
+        } else if (view[1] == "fullfilm") {
+            viewFullFilm();
+        } else {
+            alert("Wrong parameter!!!");
+        }
+    }
+</script>
 </html>

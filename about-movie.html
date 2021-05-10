@@ -5,26 +5,30 @@
     <!-- basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
     <!-- mobile metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <!-- site metas -->
-    <title>Kỳ Án Ánh Trăng</title>
+    <title>Về "Phim Ngắn: Kỳ Án Ánh Trăng"</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- source Linking -->
-    <link rel="icon" href="Resources/page-icon.png" type="image/icon type">
-    <link rel="stylesheet" type="text/css" href="CSS/general.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/animation.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/adapter-config.css" />
+    <link rel="icon" href="source/mini-kv.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="CSS/general.css">
+    <link rel="stylesheet" type="text/css" href="CSS/animation.css">
+    <link rel="stylesheet" type="text/css" href="CSS/adapter-config.css">
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
-<body>    
+<body>
+    <div id="loader-container">
+        <div class="loader" id="loaderBar"></div>
+    </div>
+    
     <header id="header">
         <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -35,14 +39,16 @@
                 <a href="about-movie.html">
                     Về Kỳ Án Ánh Trăng
                 </a>
-                <a href="https://forms.gle/1im48pEhcsmyk7dr6" target="_blank">
-                    Gửi thư cho chúng mình
+                <a href="FAQs.html">
+                    Những Câu Hỏi Thường Gặp
                 </a>
             </div>
         </div>
         <div class="header-container" id="headerBar">
             <div class="header-kv">
-                <img alt="mini key visual" src="source/mini-kv.png"/>
+                <img alt="mini kv" id="HomepageKV" 
+                    src="source/mini-kv.png" 
+                    onclick="goToHomepage()">
             </div>
             <div class="header-menu" id="headerMenu">
                 <span style="
@@ -55,7 +61,6 @@
                         onclick="openNav()">
                     &#9776;
                 </span>
-                <img alt="menu icon right" src="source/menu-icon-f2d092.png" hidden>
             </div>
             <div class="header-link" id="headerLink">
                 <div>
@@ -69,8 +74,8 @@
                     </a>
                 </div>
                 <div>
-                    <a href="https://forms.gle/1im48pEhcsmyk7dr6" target="_blank">
-                        Gửi thư cho chúng mình
+                    <a href="FAQs.html">
+                        Những Câu Hỏi Thường Gặp
                     </a>
                 </div>
             </div>
@@ -79,29 +84,43 @@
 
     <div class="nothing" onscroll="scroller()">
         Trang này hiện méo có gì cạ.<br/>
-        <a href="index.html"> Quay lại trang trước thoiii...</a>
+        <a href="index.html">Quay về thoiii...</a>
     </div>
 
+    <div class="chat-with-us">
+        <a href="https://m.me/101227502022397" target="_blank">
+            <img alt="Messenger Chat" src="source/messenger-flipped-recolored-2.png">
+        </a>
+    </div>
+    
     <footer>
+        <div class="contact-info" id="contact">
+            <h2>
+                LIÊN HỆ VỚI CHÚNG MÌNH | CONTACT US
+            </h2>
+            <div class="footer-icon">
+                <a href="https://www.facebook.com/phimngankyananhtrang" target="_blank">
+                    <img alt="Facebook Fanpage" src="source/facebook.png">
+                </a>
+                <a href="https://www.youtube.com/c/PhimngắnKỳÁnÁnhTrăng" target="_blank">
+                    <img alt="Youtube Channel" src="source/youtube.png">
+                </a>
+                <a href="mailto:phimngankyananhtrang@gmail.com" target="_blank">
+                    <img alt="Gmail FAQs" src="source/mail.png">
+                </a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>
+                ©2021 LƯU LY SẢN XUẤT ĐỘI. ALL RIGHTS RESERVED<br/>
+                All trademarks referenced herein are the properties 
+                of their respective owners.
+            </p>
+        </div>
     </footer>
     
     <!-- tracking field -->
-    <p id="fakeHeight"></p>
-	<p id="scrollPercentLabel" hidden>Scroll Percentage: <span>0</span>%</p>
-    <style>
-        #scrollPercentLabel {
-            font-family: Impact;
-            font-size: 50px;
-            color: #2B2B2B;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            box-shadow: 8px 8px 5px rgba(20, 20, 20, 1);
-            border-radius: 15px;
-        }
-    </style>
+    <div class="something-bruh" id="bruh"></div>
 </body>
 
 <script src="js/event.js"></script>

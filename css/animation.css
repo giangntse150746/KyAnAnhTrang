@@ -92,6 +92,9 @@
     transition: .3s;
     filter: brightness(110%) drop-shadow(3px 3px 5px rgba(0, 0, 0, 1));
 }
+.introdution .button a:active {
+    margin-top: 1.4vw;
+}
 
 .characters-preview img:hover {
     filter: brightness(125%);
@@ -105,22 +108,186 @@
     transition: .2s;
 }
 
-/*
-.count-down:hover {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .5s ease;
-    animation: rotation 2s;
+.nothing a:hover {
+    filter: brightness(120%);
 }
-@keyframes rotation {
+
+/*effect-underline*/
+a.effect-underline:after {
+	content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1.2em;
+    width: 100%;
+    border-bottom: 3px solid;
+    margin-top: 10px;
+    opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+a.effect-underline:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+}
+
+.iframe-container .button:hover {
+    margin-top: 0;
+    transition: .3s;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.67));
+    cursor: pointer;
+}
+
+.chat-with-us img:hover {
+    animation: shake .5s;
+    transition: transform .5s ease;
+    transition-delay: .5s;
+    transform: translate(-15px, -10px) scale(1.5);
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.popup .hide {
+    visibility: hidden;
+    -webkit-animation: fadeOut .5s;
+    animation: fadeOut .5s;
+}
+
+/* Glowing */
+.glowing {
+    -webkit-animation: glowing .5s ease-in-out infinite alternate;
+    -moz-animation: glowing .5s ease-in-out infinite alternate;
+    animation: glowing .5s ease-in-out infinite alternate;
+}
+
+/* Keyframes */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-2deg); }
+    20% { transform: translate(-3px, 0px) rotate(2deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(3deg); }
+    50% { transform: translate(-1px, 2px) rotate(-2deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-3deg); }
+    80% { transform: translate(-1px, -1px) rotate(2deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+/* Add animation (fade in/out the popup) */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: .75; }
+    100% { opacity: 1; }
+}
+@-webkit-keyframes fadeIn { /* Safari */
+    0% { opacity: 0; }
+    50% { opacity: .75; }
+    100% { opacity: 1; }
+}
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    50% { opacity: .25; }
+    100% { opacity: 0; }
+}
+@-webkit-keyframes fadeOut { /* Safari */
+    0% { opacity: 1; }
+    50% { opacity: .25; }
+    100% { opacity: 0; }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin { /* Safari */
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes glowing {
     0% {
-        transform: rotate(0deg);
+        text-shadow: 0 0 2px #fff, 
+            0 0 4px #fff, 
+            0 0 6px #F2D092, 
+            0 0 8px #F2D092, 
+            0 0 10px #F2D092, 
+            0 0 12px #F2D092, 
+            0 0 14px #F2D092;
     }
     100% {
-        transform: rotate(360deg);
+        text-shadow: 0 0 4px #fff, 
+            0 0 6px #ffdea2, 
+            0 0 8px #ffdea2, 
+            0 0 10px #ffdea2, 
+            0 0 12px #ffdea2, 
+            0 0 14px #ffdea2, 
+            0 0 16px #ffdea2;
+    }
+}
+@-webkit-keyframes glowing {
+    0% {
+        text-shadow: 0 0 2px #fff, 
+            0 0 4px #fff, 
+            0 0 6px #F2D092, 
+            0 0 8px #F2D092, 
+            0 0 10px #F2D092, 
+            0 0 12px #F2D092, 
+            0 0 14px #F2D092;
+    }
+    100% {
+        text-shadow: 0 0 4px #fff, 
+            0 0 6px #ffdea2, 
+            0 0 8px #ffdea2, 
+            0 0 10px #ffdea2, 
+            0 0 12px #ffdea2, 
+            0 0 14px #ffdea2, 
+            0 0 16px #ffdea2;
+    }
+}
+
+/* Animista Area */
+/**
+ * ----------------------------------------
+ * animation tracking-in-contract
+ * ----------------------------------------
+ */
+.tracking-in-contract {
+	-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+}
+@keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
     }
 }
