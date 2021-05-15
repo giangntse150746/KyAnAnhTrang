@@ -12,8 +12,8 @@ body {
     overflow-y: auto;
     background-color: rgba(18, 61, 61, 1);
     width: 100%;
+    height: auto;
     z-index: -1;
-    height: 2800px;
 }
 p, h1, h2, span {
     font-family: Montserrat;
@@ -23,10 +23,6 @@ p, h1, h2, span {
 a {
     font-family: Montserrat;
     text-decoration: none;
-}
-.nothing {
-    position: relative;
-    margin: 300px 0 0 100px;
 }
 
 /* Loader */
@@ -156,6 +152,60 @@ header {
     padding-top: 22px;
 }
 
+.bruh-line {
+    width: 100px;
+    height: 5px;
+    margin: 0;
+    background-color: #F2D092;
+}
+
+/* Up-to-top Button */
+.up-to-top {
+    width: 100%;
+    float: left;
+    position: fixed;
+    z-index: 3;
+}
+#topButton {
+    text-align: center;
+    background-color: #F2D092;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-right: 10px;
+    position: relative;
+    top: 840px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    filter: drop-shadow(2px 2px 4px #000);
+}
+#topButton::after {
+    content: '\f077';
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: rgba(18, 61, 61, 1);
+}
+#topButton:hover {
+    cursor: pointer;
+    background-color: rgba(18, 61, 61, 1);
+}
+#topButton:hover:after {
+    color: #F2D092;
+}
+#topButton:active {
+    background-color: rgba(242, 208, 146, 0.8);
+}
+#topButton.show {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Something Bruh */
 .something-bruh {
     width: 0%;
@@ -172,6 +222,11 @@ header {
     text-align: center;
     text-transform: uppercase;
     color: rgba(242, 208, 146, 1);
+}
+
+.nothing {
+    position: absolute;
+    margin: 300px 0 0 100px;
 }
 .nothing {
     font-family: Montserrat;
@@ -198,7 +253,7 @@ header {
     position: relative;
     border-radius: 5px;
     position: relative; 
-    top: 720px; 
+    top: 740px; 
     margin: 10px 5px 0 0;
     transition: .3s;
     filter: drop-shadow(0 5px 3px #000);

@@ -1,5 +1,111 @@
 @charset "utf-8";
 
+.header-link div:first-of-type a {
+    font-weight: 1000;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 1),
+                 0 0 6px rgba(242, 208, 146, 1);
+}
+h2 {
+    color: rgba(242, 208, 146, 1);
+}
+/*
+p {
+    word-wrap: break-word;
+    white-space:pre-wrap;
+}
+*/
+
+/* .about-us::First-part */
+.about-us {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.about-ekip {
+    width: 80%;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    left: 10%;
+    right: 10%;
+    top: 160px;
+}
+.about-ekip .title {
+    width: 300px;
+    position: relative;
+    color: rgba(242, 208, 146, 1);
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.about-ekip .content {
+    width: 100%;
+}
+.content .about-ekip-2, .about-ekip-3, .about-ekip-4, .about-ekip-5, .about-ekip-6 {
+    width: 100%;
+    float: left;
+    height: 900px;
+}
+.content .about-ekip-1 {
+    width: 100%;
+    float: left;
+    height: 880px;
+}
+.text {
+    width: 80%;
+    float: left;
+    font-size: 20px;
+    overflow: auto;
+}
+
+/* .about-ekip-1 */
+.ekip-preview {
+    width: 50%;
+    float: left;
+    margin-top: 36px;
+}
+.ekip-reveal {
+    width: 50%;
+    float: left;
+    height: 560px;
+    margin-top: 36px;
+    background-color: rgba(242, 208, 146, 0.5);
+}
+.ekip-preview div div {
+    width: 140px;
+    float: left;
+    height: 140px;
+
+}
+.ekip-preview .first-area, .second-area, .third-area {
+    width: 100%;
+    float: left;
+    height: 140px;
+}
+.ekip-preview img {
+    width: 120px;
+    float: left;
+    height: 120px;
+    border-radius: 5px;
+    transition: .2s;
+    filter: brightness(90%);
+}
+
+/* .about-ekip-2,3,4,5,6 */
+.image {
+    width: 100%;
+    float: left;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+.image img {
+    margin-top: 50px;
+    height: 500px;
+}
+
+
 footer {
-    top: 960px;
+    top: 5760px;
 }

@@ -140,12 +140,30 @@ a.effect-underline:hover:after {
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.67));
     cursor: pointer;
 }
+.iframe-container .button:active {
+    margin-top: 4px;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.67));
+}
 
 .chat-with-us img:hover {
     animation: shake .5s;
     transition: transform .5s ease;
     transition-delay: .5s;
     transform: translate(-15px, -10px) scale(1.5);
+}
+
+/* About Us */
+.ekip-preview img:hover {
+    filter: brightness(125%) drop-shadow(0 6px 6px rgba(0, 0, 0, 0.5));
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .3s;
+    border: none;
+}
+.ekip-preview img:active {
+    transform: scale(1);
+    filter: brightness(100%);
+    transition: .2s;
 }
 
 /* Toggle this class - hide and show the popup */

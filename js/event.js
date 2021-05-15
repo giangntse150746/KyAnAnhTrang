@@ -97,19 +97,19 @@ $(document).ready(function() {
 //    this.scrollTop -= (delta*840);
 //    e.preventDefault();
 //  });
+  /*********/
 
-  /* Loader Controller */
+  /* close Loader after loaded */
   setTimeout(fadeOutLoader, 0);
   setTimeout(closeLoader, 1000);
-
-  function closeLoader() {
-    var loader = document.getElementById("loader-container");
-    loader.setAttribute("style", `z-index: -1;`);
-  }
-  function fadeOutLoader() {
-    var loaderBar = document.getElementById("loaderBar");
-    loaderBar.setAttribute("style", `filter: opacity(0%); transition: .8s ease;`);
-  }
+  /*********/
+  /* Scroll Top */
+  var upToTop = $('#topButton');
+  
+  upToTop.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
   /*********/
 
   /* Scroll Controller */
@@ -130,7 +130,7 @@ $(document).ready(function() {
            transition: .5s ease;
            filter: drop-shadow(0 10px 20px rgb(0, 0, 0, 0.75));
           `);
-        $('#myNav')
+        upToTop.addClass('show');
       } else {
         var scroller = document.getElementById("headerBar");
         scroller.setAttribute("style", 
@@ -139,12 +139,23 @@ $(document).ready(function() {
            width: 80%;
            filter: drop-shadow(0 5px 10px rgb(0, 0, 0, 0.67));
           `);
+        upToTop.removeClass('show');
       }
   });
-  /*********/
+
 });
 
 /************************************************************** */
+
+/* Loader Controller */
+function closeLoader() {
+  var loader = document.getElementById("loader-container");
+  loader.setAttribute("style", `visibility: hidden`);
+}
+function fadeOutLoader() {
+  var loaderBar = document.getElementById("loaderBar");
+  loaderBar.setAttribute("style", `filter: opacity(0%); transition: .8s ease;`);
+}
 
 /* Navigation Menu Controller */
 function openNav() {
@@ -263,8 +274,13 @@ function viewFullFilm() {
     </iframe>
   `;
   document.getElementById("switchIframeButton").innerHTML=`
-    <a href="film-view.html?view=trailer">Xem Trailer</a>
+    <a>Xem Trailer</a>
   `;
+  $('#switchIframeButton').click(function() {
+      setTimeout(function() {
+        window.location = 'film-view.html?view=trailer';
+      }, 300);
+  });
 }
 function viewTrailer() {
   document.getElementById("iframeView").innerHTML=`
@@ -276,6 +292,11 @@ function viewTrailer() {
     </iframe>
   `;
   document.getElementById("switchIframeButton").innerHTML=`
-    <a href="film-view.html?view=fullfilm">Xem Phim</a>
+    <a>Xem Phim</a>
   `;
+  $('#switchIframeButton').click(function() {
+      setTimeout(function() {
+        window.location = 'film-view.html?view=fullfilm';
+      }, 300);
+  });
 }

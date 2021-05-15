@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/specific/film-view.css">
     <link rel="stylesheet" type="text/css" href="CSS/animation.css">
     <link rel="stylesheet" type="text/css" href="CSS/adapter-config.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <style>
         body {
             height: 937px;
@@ -101,6 +102,12 @@
         </a>
     </div>
     
+    <div class="up-to-top">
+        <a id="topButton"></a>
+    </div>
+
+    <div class="background-texture"></div>
+
     <footer>
         <div class="contact-info" id="contact">
             <h2>
@@ -141,8 +148,26 @@
         } else if (view[1] == "fullfilm") {
             viewFullFilm();
         } else {
+            var iframe = document.getElementById('iframeContainer')
+            iframe.innerText = 'Something went wrong...';
+            iframe.setAttribute("style", `
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: #F2D092;
+                                font-size: 5vw;
+                                font-family: Montserrat;
+                                `);
             alert("Wrong parameter!!!");
         }
+        
+        $(document).ready(function() {
+            $('#switchIframeButton').click(function() {
+                setTimeout(function() {}, 500);
+            });
+        });
     }
 </script>
 </html>
+
+<!--READY-->

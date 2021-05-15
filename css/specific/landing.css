@@ -5,6 +5,8 @@
     width: 100%;
     float: left;
     position: absolute;
+    z-index: 0;
+    height: 2820px;
 }
 .introdution {
     width: 100%;
@@ -84,10 +86,13 @@
     position: relative;
     height: 1080px;
 }
-.character-information {
+.character-reveal {
     width: 80%;
+    margin-left: 10%;
+    margin-top: 120px;
     float: left;
-    height: 640px;
+    height: 540px;
+    background-color: rgba(242, 208, 146, 0.5);
 }
 .characters-preview {
     width: 1920px;
