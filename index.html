@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <!-- site metas -->
+    <title>Kỳ Án Ánh Trăng - Homepage</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- source Linking -->
+    <link rel="icon" href="source/mini-kv.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="CSS/general.css">
+    <link rel="stylesheet" type="text/css" href="CSS/specific/landing.css">
+    <link rel="stylesheet" type="text/css" href="CSS/animation.css">
+    <link rel="stylesheet" type="text/css" href="CSS/adapter-config.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='js/jquery-mousewheel.min.js'></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div id="loader-container">
+        <div class="loader" id="loaderBar"></div>
+    </div>
+    
+    <header id="header">
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" id="closeBtn" 
+                class="closebtn" onclick="closeNav()">
+                &times;
+            </a>
+            <div class="overlay-content">
+                <a href="about-us.html?view=ekip" class="effect-underline">
+                    Về chúng mình
+                </a>
+                <a href="about-movie.html" class="effect-underline">
+                    Về Kỳ Án Ánh Trăng
+                </a>
+                <a href="FAQs.html" class="effect-underline">
+                    Những Câu Hỏi Thường Gặp
+                </a>
+            </div>
+        </div>
+        <div class="header-container" id="headerBar">
+            <div class="header-kv">
+                <img alt="mini kv" id="HomepageKV" 
+                    src="source/mini-kv.png" 
+                    onclick="goToHomepage()">
+            </div>
+            <div class="header-menu" id="headerMenu">
+                <span style="
+                            font-size:45px;
+                            cursor:pointer;
+                            z-index: 100;
+                            color: rgba(242, 208, 146, 1);
+
+                            " 
+                        onclick="openNav()">
+                    &#9776;
+                </span>
+            </div>
+            <div class="header-link" id="headerLink">
+                <div>
+                    <a href="about-us.html?view=ekip">
+                        Về chúng mình
+                    </a>
+                </div>
+                <div>
+                    <a href="about-movie.html?view=curse">
+                        Về Kỳ Án Ánh Trăng
+                    </a>
+                </div>
+                <div>
+                    <a href="https://forms.gle/ueF5RWAo9tSNfXos6">
+                        Gửi thư cho chúng mình
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="landing-page" onscroll="scroller()" id="landingContainer">
+        <div class="introdution">
+            <div class="background-teaser" id="backgroundTrailer">
+                <img src="source/landing/IMG_4407.png">
+            </div>
+            <div class="surface-introduction">
+                <div class="text">
+                    <h1>Kỳ Án Ánh Trăng</h1>
+                    <p>
+                        Dự án phim ngắn đầu tay của nhóm bạn trẻ <br/>
+                        đến từ Lưu Ly Sản Xuất Đội.
+                    </p>
+                </div>
+                <div class="button">
+                    <a href="film-view.html?view=trailer">Xem Trailer</a>
+                    <a href="film-view.html?view=fullfilm">Xem Phim</a>
+                </div>
+            </div>
+        </div>
+        <div class="inspire">
+            <div class="kv-inspire">
+                <img src="source/kv.png">
+            </div>
+            <div class="text-inspire">
+                <h1>
+                    CẢM HỨNG
+                </h1>
+                <div class="bruh-line"></div>
+                <p>
+                    Đây là phim ngắn đầu tay của Lưu Ly Sản Xuất Đội. Kỳ Án Ánh Trăng 
+                    mang các yếu tố của một phim trinh thám điển hình. Cốt truyện được 
+                    lấy cảm hứng từ bộ tiểu thuyết cùng tên do vợ chồng nhà văn Quỷ Cổ 
+                    Nữ chắp bút. Bộ phim mang người xem đến với chuyến hành trình của 
+                    Huyên Linh - cô mong muốn tìm kiếm công lý và lời giải cho những ẩn 
+                    khuất xung quanh những vụ thảm sát ở trường đại học Y thành phố K.
+                    Vụ án Sonate Ánh trăng cùng những câu chuyện huyền bí, ghê rợn 
+                    nhất cứ vậy mà dần dần rơi vào tầm ngắm của cô cùng chàng thám tử 
+                    Trần Đông đồng hành. 
+                </p>
+            </div>
+        </div>
+        <div class="quote">
+            <p>
+                "Ta chỉ mơ những điều tươi đẹp để rồi quên mất cơn ác mộng chưa bao giờ kết thúc..."
+            </p>
+            <img src="source/landing/2.png" alt=""/>
+        </div>
+        <div class="characters">
+            <div class="character-reveal" id="characterInfo">
+                Still nothing :V
+            </div>
+            <div class="characters-preview">
+                <style>
+                    span.popup-text {
+                        color: #123d3d; 
+                        font-weight: 600;
+                    }
+                    .smaller-text {
+                        font-size: 12px;
+                        color: rgb(255, 51, 0);
+                        font-weight: 800;
+                    }
+                </style>
+                <div class="first-area">
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
+                        <img id="HuyenLinh" src="source/characters/preview-HuyenLinh.png">
+                        <span class="popup-text">
+                            Huyên Linh
+                            <span class="smaller-text glowing" hidden>&lt;HOT&gt;</span>
+                        </span>
+                    </div>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
+                        <img id="TranDong" src="source/characters/preview-TranDong.png">
+                        <span class="popup-text">
+                            Trần Đông
+                        </span>
+                    </div>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
+                        <img id="AnNhien" src="source/characters/preview-AnNhien.png">
+                        <span class="popup-text">
+                            An Nhiên
+                        </span>
+                    </div>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
+                        <img id="NguoiGia" src="source/characters/preview-NguoiGia.png">
+                        <span class="popup-text">
+                            Người Già
+                        </span>
+                    </div>
+                </div>
+                <div class="second-area">
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
+                        <img id="TruongLam" src="source/characters/preview-TruongLam.png"/>
+                        <span class="popup-text">
+                            Trương Lãm
+                        </span>
+                    </div>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
+                        <img id="HaVi" src="source/characters/preview-HaVi.png"/>
+                        <span class="popup-text">
+                            Hạ Vi
+                            <span class="smaller-text glowing" hidden>&lt;HOT&gt;</span>
+                        </span>
+                    </div>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
+                        <img id="BaoTran" src="source/characters/preview-BaoTran.png"/>
+                        <span class="popup-text">
+                            Bảo Trân
+                        </span>
+                    </div>
+                    <div class="popup" onmouseover="openPopUp(this)" 
+                            onmouseout="closePopUp(this)">
+                        <img id="HuyenKhanh" src="source/characters/preview-HuyenKhanh.png"/>
+                        <span class="popup-text">
+                            Huyền Khanh
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="awards">
+            <div class="awards-overview">
+                <h1>
+                    Giải Thưởng của Phim
+                </h1>
+                <div class="bruh-line"></div>
+                <p>
+                    MOVE WITH DRAMAS là sự kiện đánh dấu sự trưởng thành của toàn thể ekip, 
+                    đồng thời ghi nhận những thành công mà Phim ngắn: Kỳ Án Ánh Trăng 
+                    đạt được.
+                </p>
+            </div>
+            <div class="awards-image">
+                <div>
+                    <img alt="1st Vote Rating" src="/source/awards/vote-1st.png">
+                </div>
+                <div>
+                    <img alt="1st Multimedia" src="/source/awards/multimedia-1st.png">
+                </div>
+                <div>
+                    <img alt="1st Script Story" src="/source/awards/script-1st.png">
+                </div>
+            </div>
+            <div class="awards-describe">
+                <p>
+                    Dù còn nhiều sai sót nhưng công sức của toàn thể Lưu Ly Sản Xuất Đội 
+                    đã được ghi nhận. Những giải thưởng trên đã tiếp thêm động lực cho 
+                    chúng mình hoàn thành sản phẩm công chiếu Online cuối cùng.
+                </p>
+                <p>
+                    Sản phẩm đầu tay này được mọi người đánh giá cao và công nhận thực sự 
+                    chính là điều tuyệt vời nhất. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-with-us">
+        <a href="https://m.me/101227502022397" target="_blank">
+            <img alt="Messenger Chat" src="source/messenger-flipped-recolored-2.png">
+        </a>
+    </div>
+    
+    <div class="up-to-top">
+        <a id="topButton"></a>
+    </div>
+
+    <div class="background-texture"></div>
+
+    <footer>
+        <div class="footer-wrap">
+            <div class="contact-info" id="contact">
+                <h2>
+                    LIÊN HỆ VỚI CHÚNG MÌNH
+                </h2>
+                <div class="footer-icon">
+                    <a href="https://www.facebook.com/phimngankyananhtrang" target="_blank">
+                        <img alt="Facebook Fanpage" src="source/facebook.png">
+                    </a>
+                    <a href="https://www.youtube.com/c/PhimngắnKỳÁnÁnhTrăng" target="_blank">
+                        <img alt="Youtube Channel" src="source/youtube.png">
+                    </a>
+                    <a href="mailto:phimngankyananhtrang@gmail.com" target="_blank">
+                        <img alt="Gmail FAQs" src="source/mail.png">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>
+                    ©2021 LƯU LY SẢN XUẤT ĐỘI. ALL RIGHTS RESERVED<br/>
+                    All trademarks referenced herein are the properties 
+                    of their respective owners.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- tracking field -->
+    <div class="something-bruh" id="bruh"></div>
+    <!--<div class="count-down" id="countDown"></div>-->
+</body>
+
+<script src="js/event.js"></script>
+</html>
