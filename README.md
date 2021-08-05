@@ -13,8 +13,8 @@
 
 ### You can see more about us and our project below:
 #### [Our Fanpage](https://www.facebook.com/phimngankyananhtrang)
-#### [Our Channel](#) (not available)
-#### [Our Website](#) (not available)
+#### [Our Channel](#) (https://www.youtube.com/channel/UCwNyIjxRcM8mkig4goqIPFg)
+#### [Our Website](#) (https://kyananhtrang.netlify.app)
 
 
 ### Connect me via:
