@@ -1,62 +1,93 @@
-@font-face {  
-  font-family: 'Montserrat';  
-  src: url('/source/Montserrat-Regular.ttf');
-}  
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/source/Montserrat-Regular.ttf');
+}
+
+
 /* Header fix */
+
 .header-container {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
 }
 
 ::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgba(242, 208, 146);
-  opacity: 0.67; /* Firefox */
-}
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: rgba(242, 208, 146, 0.67);
-}
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: rgba(242, 208, 146, 0.67);
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(242, 208, 146);
+    opacity: 0.67;
+    /* Firefox */
 }
 
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(242, 208, 146, 0.67);
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(242, 208, 146, 0.67);
+}
+
+
 /* width */
+
 ::-webkit-scrollbar {
-  width: 0px;
+    width: 0px;
 }
+
+
 /* Track */
+
 ::-webkit-scrollbar-track {
-  background: transparent;
+    background: transparent;
 }
+
+
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 15px;
+    background: #888;
+    border-radius: 15px;
 }
+
+
 /* Mouse selection denied*/
+
 * {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
                           supported by Chrome, Edge, Opera and Firefox */
 }
 
+
 /* Navigation Menu */
+
 @media all and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
-  }
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
 }
 
+
 /* Responsive Config */
+
+
 /*
 @media all and (max-width: 1200px) {
   .header-kv {
@@ -109,186 +140,208 @@
   }
 }
 */
+
 @media all and (max-width: 1600px) {
-  .footer-icon {
-    width: 36%;
-    margin: 0 32%;
-  }
+    .footer-icon {
+        width: 36%;
+        margin: 0 32%;
+    }
+    .characters-preview .first-area,
+    .second-area {
+        margin-left: 30%;
+    }
 }
 
 @media all and (max-width: 1440px) {
-  .header-link a {
-    font-size: 100%;
-  }
-  .footer-icon {
-    width: 40%;
-    margin: 0 30%;
-  }
+    .header-link a {
+        font-size: 100%;
+    }
+    .footer-icon {
+        width: 40%;
+        margin: 0 30%;
+    }
+    .characters-preview .first-area,
+    .second-area {
+        margin-left: 26%;
+    }
 }
 
 @media all and (max-width: 1080px) {
-  .header-link a {
-    font-size: 100%;
-  }
-  .footer-icon {
-    width: 40%;
-    margin: 0 30%;
-  }
+    .header-link a {
+        font-size: 100%;
+    }
+    .footer-icon {
+        width: 40%;
+        margin: 0 30%;
+    }
+    .characters-preview .first-area,
+    .second-area {
+        margin-left: 20%;
+    }
 }
 
 @media all and (max-width: 720px) {
-  /* Header */
-  .header-kv {
-    width: 20%;
-    transition: 0.1s ease;
-  }
-  .header-link a {
-    transition: none;
-  }
-  .introdution .surface-introduction {
-    width: 40vw;
-    height: 240px;
-    left: 10vw;
-    top: 180px;
-  }
-  .surface-introduction .text {
-    width: 100%;
-    height: 180px;
-    overflow: auto;
-    color: #f2d092;
-  }
-  .surface-introduction .text p {
-    line-height: 18px;
-    font-weight: 450;
-    font-size: 16px;
-    transition: .5s ease;
-  }
-  .surface-introduction .button a {
-    margin: 2vw 0 0 0;
-    height: 5vw;
-    width: 12vw;
-    font-weight: 500;
-    font-size: 1vw;
-    border-radius: 10vw;
-    transition: 0.3s ease;
-  }
-  .footer-icon {
-    width: 50%;
-    margin: 0 25%;
-  }
+    /* Header */
+    .header-kv {
+        width: 20%;
+        transition: 0.1s ease;
+    }
+    .header-link a {
+        transition: none;
+    }
+    .introdution .surface-introduction {
+        width: 40vw;
+        height: 240px;
+        left: 10vw;
+        top: 180px;
+    }
+    .surface-introduction .text {
+        width: 100%;
+        height: 180px;
+        overflow: auto;
+        color: #f2d092;
+    }
+    .surface-introduction .text p {
+        line-height: 18px;
+        font-weight: 450;
+        font-size: 16px;
+        transition: .5s ease;
+    }
+    .surface-introduction .button a {
+        margin: 2vw 0 0 0;
+        height: 5vw;
+        width: 12vw;
+        font-weight: 500;
+        font-size: 1vw;
+        border-radius: 10vw;
+        transition: 0.3s ease;
+    }
+    .footer-icon {
+        width: 50%;
+        margin: 0 25%;
+    }
+    .characters-preview .first-area,
+    .second-area {
+        margin-left: 6%;
+    }
 }
+
 
 /* Surface Duo */
-@media only screen and (max-width: 540px) {
-  body {
-    width: 540px;
-    float: none;
-  }
 
-  header {
-    width: 540px;
-  }
-  .landing-page {
-    width: 540px;
-  }
-  footer {
-    width: 540px;
-    font-size: medium;
-  }
+@media only screen and (max-width: 540px) {
+    body {
+        width: 540px;
+        float: none;
+    }
+    header {
+        width: 540px;
+    }
+    .landing-page {
+        width: 540px;
+    }
+    footer {
+        width: 540px;
+        font-size: medium;
+    }
 }
+
 
 /* Iphone 6,7,8 plus */
-@media only screen and (max-width: 414px) {
-  body {
-    width: 414px;
-    float: none;
-  }
 
-  header {
-    width: 414px;
-  }
-  .landing-page {
-    width: 414px;
-  }
-  footer {
-    width: 414px;
-    font-size: smaller;
-  }
+@media only screen and (max-width: 414px) {
+    body {
+        width: 414px;
+        float: none;
+    }
+    header {
+        width: 414px;
+    }
+    .landing-page {
+        width: 414px;
+    }
+    footer {
+        width: 414px;
+        font-size: smaller;
+    }
 }
+
 
 /* Pixel, Pixel XL */
-@media only screen and (max-width: 411px) {
-  body {
-    width: 411px;
-    float: none;
-  }
 
-  header {
-    width: 411px;
-  }
-  .landing-page {
-    width: 411px;
-  }
-  footer {
-    width: 411px;
-    font-size: smaller;
-  }
+@media only screen and (max-width: 411px) {
+    body {
+        width: 411px;
+        float: none;
+    }
+    header {
+        width: 411px;
+    }
+    .landing-page {
+        width: 411px;
+    }
+    footer {
+        width: 411px;
+        font-size: smaller;
+    }
 }
+
 
 /* Iphone 6,7,8 */
-@media only screen and (max-width: 375px) {
-  body {
-    width: 375px;
-    float: none;
-  }
 
-  header {
-    width: 375px;
-  }
-  .landing-page {
-    width: 375px;
-  }
-  footer {
-    width: 375px;
-    font-size: x-small;
-  }
+@media only screen and (max-width: 375px) {
+    body {
+        width: 375px;
+        float: none;
+    }
+    header {
+        width: 375px;
+    }
+    .landing-page {
+        width: 375px;
+    }
+    footer {
+        width: 375px;
+        font-size: x-small;
+    }
 }
+
 
 /* Samsung Galaxy S5 */
+
 @media only screen and (max-width: 360px) {
-  body {
-    width: 360px;
-    float: none;
-  }
-
-  header {
-    width: 360px;
-  }
-  .landing-page {
-    width: 360px;
-  }
-  footer {
-    width: 360px;
-    font-size: x-small;
-  }
-
+    body {
+        width: 360px;
+        float: none;
+    }
+    header {
+        width: 360px;
+    }
+    .landing-page {
+        width: 360px;
+    }
+    footer {
+        width: 360px;
+        font-size: x-small;
+    }
 }
 
-/* thay đt hộ em */
-@media only screen and (max-width: 320px) {
-  body {
-    width: 320px;
-    float: none;
-  }
 
-  header {
-    width: 320px;
-  }
-  .landing-page {
-    width: 320px;
-  }
-  footer {
-    width: 320px;
-    font-size: x-small;
-  }
+/* thay đt hộ em */
+
+@media only screen and (max-width: 320px) {
+    body {
+        width: 320px;
+        float: none;
+    }
+    header {
+        width: 320px;
+    }
+    .landing-page {
+        width: 320px;
+    }
+    footer {
+        width: 320px;
+        font-size: x-small;
+    }
 }
