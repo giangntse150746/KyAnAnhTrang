@@ -25,6 +25,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src='js/jquery-mousewheel.min.js'></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="js/specific/landing.js"></script>
 </head>
 
 <body>
@@ -87,7 +89,7 @@
     <div class="landing-page" onscroll="scroller()" id="landingContainer">
         <div class="introdution">
             <div class="background-teaser" id="backgroundTrailer">
-                <img src="source/landing/IMG_4407.png">
+                <img src="source/landing/1.png">
             </div>
             <div class="surface-introduction">
                 <div class="text">
@@ -111,7 +113,7 @@
                     CẢM HỨNG
                 </h1>
                 <div class="bruh-line"></div>
-                <p class="overflow-auto">
+                <p class="overflow-auto text-justify">
                     Đây là phim ngắn đầu tay của Lưu Ly Sản Xuất Đội. Kỳ Án Ánh Trăng mang các yếu tố của một phim trinh thám điển hình. Cốt truyện được lấy cảm hứng từ bộ tiểu thuyết cùng tên do vợ chồng nhà văn Quỷ Cổ Nữ chắp bút. Bộ phim mang người xem đến với chuyến
                     hành trình của Huyên Linh - cô mong muốn tìm kiếm công lý và lời giải cho những ẩn khuất xung quanh những vụ thảm sát ở trường đại học Y thành phố K. Vụ án Sonate Ánh trăng cùng những câu chuyện huyền bí, ghê rợn nhất cứ vậy mà dần
                     dần rơi vào tầm ngắm của cô cùng chàng thám tử Trần Đông đồng hành.
@@ -126,9 +128,13 @@
         </div>
         <div class="characters">
             <div class="character-reveal border-dash" id="characterInfo">
-                <div id="reveal-none" class="all side" hidden>
+                <div id="reveal-none" class="all side">
                     <h1>Pick a character to find out interest things...</h1>
                 </div>
+                <div id="reveal-info" class="">
+
+                </div>
+                <!--
                 <div id="reveal-HuyenLinh" class="">
                     <div class="left-side">
                         <img src="source/landing/character-reveal/HuyenLinh.png" alt="reveal-HuyenLinh">
@@ -257,6 +263,7 @@
                         </p>
                     </div>
                 </div>
+            -->
             </div>
             <div class="characters-preview">
                 <style>
@@ -272,26 +279,26 @@
                     }
                 </style>
                 <div class="first-area">
-                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)">
+                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)" onclick="triggerReveal(this)">
                         <img id="HuyenLinh" src="source/landing/character-preview/preview-HuyenLinh.png">
                         <span class="popup-text">
                             Huyên Linh
                             <span class="smaller-text glowing" hidden>&lt;HOT&gt;</span>
                         </span>
                     </div>
-                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)">
+                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)" onclick="triggerReveal(this)">
                         <img id="TranDong" src="source/landing/character-preview/preview-TranDong.png">
                         <span class="popup-text">
                             Trần Đông
                         </span>
                     </div>
-                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)">
+                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)" onclick="triggerReveal(this)">
                         <img id="AnNhien" src="source/landing/character-preview/preview-AnNhien.png">
                         <span class="popup-text">
                             An Nhiên
                         </span>
                     </div>
-                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)">
+                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)" onclick="triggerReveal(this)">
                         <img id="NguoiGia" src="source/landing/character-preview/preview-NguoiGia.png">
                         <span class="popup-text">
                             Chủ Nhiệm CLB Nhiếp Ảnh
@@ -300,27 +307,27 @@
                     </div>
                 </div>
                 <div class="second-area">
-                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)">
+                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)" onclick="triggerReveal(this)">
                         <img id="TruongLam" src="source/landing/character-preview/preview-TruongLam.png" />
                         <span class="popup-text">
                             Trương Lãm
                             <div hidden>ham lon so 1</div>
                         </span>
                     </div>
-                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)">
+                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)" onclick="triggerReveal(this)">
                         <img id="HaVi" src="source/landing/character-preview/preview-HaVi.png" />
                         <span class="popup-text">
                             Hạ Vi
                             <span class="smaller-text glowing" hidden>&lt;HOT&gt;</span>
                         </span>
                     </div>
-                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)">
+                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)" onclick="triggerReveal(this)">
                         <img id="BaoTran" src="source/landing/character-preview/preview-BaoTran.png" />
                         <span class="popup-text">
                             Bảo Trân
                         </span>
                     </div>
-                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)">
+                    <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)" onclick="triggerReveal(this)">
                         <img id="HuyenKhanh" src="source/landing/character-preview/preview-HuyenKhanh.png" />
                         <span class="popup-text">
                             Huyền Khanh

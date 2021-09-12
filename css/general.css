@@ -292,6 +292,10 @@ header {
     border-style: dashed;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 
 /* Chat With Us */
 
