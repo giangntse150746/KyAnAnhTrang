@@ -279,9 +279,11 @@ function muteAudio() {
     if (state === true) {
         document.getElementById("btnMute").innerHTML = '<i class="fa fa-volume-up" aria-hidden="true"></i>';
         document.getElementById("bgAudio").muted = false;
+        console.log('volume: on');
     }
     else {
         document.getElementById("btnMute").innerHTML = '<i class="fa fa-volume-off" aria-hidden="true"></i>';
         document.getElementById("bgAudio").muted = true;
+        console.log('volume: off');
     }
 }

@@ -214,7 +214,8 @@ a.effect-underline:hover:after {
 
 #btnMute:hover {
   cursor: pointer;
-  filter: brightness(1.2) drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.67));
+  color: #f2d092;
+  background-color: rgba(18, 61, 61, 1);
   transition: 0.5s;
 }
 
