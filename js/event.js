@@ -141,10 +141,6 @@ $(document).ready(function() {
             upToTop.removeClass('show');
         }
     });
-
-    /* Background song controls */
-    if (document.getElementById("bgAudio") != null)
-        document.getElementById("bgAudio").volume = 0.3;
 });
 
 /************************************************************** */
@@ -272,18 +268,4 @@ function closePopUp(popContainer) {
 /* On Click Controller */
 function delayClick() {
     setTimeout(function() { return; }, 5000);
-}
-
-function muteAudio() {
-    var state = document.getElementById("bgAudio").muted;
-    if (state === true) {
-        document.getElementById("btnMute").innerHTML = '<i class="fa fa-volume-up" aria-hidden="true"></i>';
-        document.getElementById("bgAudio").muted = false;
-        console.log('volume: on');
-    }
-    else {
-        document.getElementById("btnMute").innerHTML = '<i class="fa fa-volume-off" aria-hidden="true"></i>';
-        document.getElementById("bgAudio").muted = true;
-        console.log('volume: off');
-    }
 }

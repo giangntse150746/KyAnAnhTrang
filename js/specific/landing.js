@@ -197,3 +197,20 @@ function landingShowLess() {
     <a id="showMore" onclick="landingShowMore()">Xem thêm <i class="fa fa-toggle-down"></i></a>
   `;
 }
+
+$(document).ready(function() {
+    /* Background song controls */
+    document.getElementById("bgAudio").volume = 0.3;
+});
+
+function muteAudio() {
+    var state = document.getElementById("bgAudio").muted;
+    if (state === true) {
+        document.getElementById("btnMute").innerHTML = '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+        document.getElementById("bgAudio").muted = false;
+    }
+    else {
+        document.getElementById("btnMute").innerHTML = '<i class="fa fa-volume-off" aria-hidden="true"></i>';
+        document.getElementById("bgAudio").muted = true;
+    }
+}
