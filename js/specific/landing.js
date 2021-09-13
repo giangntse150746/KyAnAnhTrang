@@ -173,3 +173,27 @@ function triggerReveal(previewContainer) {
             break;
     }
 }
+
+
+function landingShowMore() {
+    document.getElementById("landingShowContent").innerHTML = `
+    <p>
+        Nội dung chính của phim xoay quanh Huyên Linh- một cô gái
+      mẫn tuệ, có khả năng quan sát và suy luận sắc bén.
+    </p>
+    <p>
+        Liệu những bí ẩn quanh căn phòng 105, bản sonata ánh trăng
+      rợn người và những cái chết kỳ bí của các cô gái trẻ hằng năm
+      sẽ có lời giải đáp? Liệu Huyên Linh có tìm thấy công lý cho
+      bản thân và cho cả những người mà cô yêu thương? Tất cả phải
+      chăng sẽ theo đúng như những gì cô mong muốn?
+    </p>
+    <a id="showLess" onclick="landingShowLess()">Ẩn bớt <i class="fa fa-toggle-down"></i></a>
+  `;
+}
+
+function landingShowLess() {
+    document.getElementById("landingShowContent").innerHTML = `
+    <a id="showMore" onclick="landingShowMore()">Xem thêm <i class="fa fa-toggle-down"></i></a>
+  `;
+}

@@ -1,11 +1,11 @@
 /* Alerts Controller */
-function onLoadAlert(){
-  swal({
-    title: "Warning",
-    text: "",
-    icon: "failed",
-    button: "OK",
-  });
+function onLoadAlert() {
+    swal({
+        title: "Warning",
+        text: "",
+        icon: "failed",
+        button: "OK",
+    });
 }
 
 /************************************************************** */
@@ -48,34 +48,34 @@ var windowsize = $(window).width();
 changeHeaderBar();
 
 $(window).resize(function() {
-  windowsize = $(window).width();
-  changeHeaderBar();
+    windowsize = $(window).width();
+    changeHeaderBar();
 });
 
 function changeHeaderBar() {
-  if (windowsize <= 540) {
-    if (windowsize < 280) {
-      closeSwal();
-      openBruh();
-    }  else if (windowsize < 360) {
-      openChangePhone();
-      closeBruh();
+    if (windowsize <= 540) {
+        if (windowsize < 280) {
+            closeSwal();
+            openBruh();
+        } else if (windowsize < 360) {
+            openChangePhone();
+            closeBruh();
+        } else {
+            closeSwal();
+            switchToMenu();
+        }
+    } else if (windowsize <= 720) {
+        switchToMenu();
     } else {
-      closeSwal();
-      switchToMenu();
+        switchToLink();
+        closeNav();
     }
-  } else if (windowsize <= 720) {
-    switchToMenu();
-  } else {
-    switchToLink();
-    closeNav();
-  }
 }
 
 /************************************************************** */
 
 $(document).on('touchmove', function(e) {
-  e.preventDefault();
+    e.preventDefault();
 });
 
 /************************************************************** */
@@ -83,64 +83,64 @@ $(document).on('touchmove', function(e) {
 /* After Ready Events */
 $(document).ready(function() {
 
-  if (history.scrollRestoration) {
-      history.scrollRestoration = 'manual';
-  } else {
-      window.onbeforeunload = function () {
-          window.scrollTo(0, 0);
-      }
-  }
-  /*********/
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    } else {
+        window.onbeforeunload = function() {
+            window.scrollTo(0, 0);
+        }
+    }
+    /*********/
 
-  /* Customize Wheel's Range */
-//  $('html, body').mousewheel(function(e, delta) {
-//    this.scrollTop -= (delta*840);
-//    e.preventDefault();
-//  });
-  /*********/
+    /* Customize Wheel's Range */
+    //  $('html, body').mousewheel(function(e, delta) {
+    //    this.scrollTop -= (delta*840);
+    //    e.preventDefault();
+    //  });
+    /*********/
 
-  /* close Loader after loaded */
-  setTimeout(fadeOutLoader, 0);
-  setTimeout(closeLoader, 1000);
-  /*********/
-  /* Scroll Top */
-  var upToTop = $('#topButton');
-  
-  upToTop.on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '300');
-  });
-  /*********/
-  /* Scroll Controller */
-  $(window).scroll(function(e) {
-    var scrollTop = $(window).scrollTop();
-    var docHeight = $(document).height();
-    var winHeight = $(window).height();
-    var scrollPercent = (scrollTop) / (docHeight - winHeight);
-    var scrollPercentRounded = Math.round(scrollPercent*100);
+    /* close Loader after loaded */
+    setTimeout(fadeOutLoader, 0);
+    setTimeout(closeLoader, 1000);
+    /*********/
+    /* Scroll Top */
+    var upToTop = $('#topButton');
 
-      $('#scrollPercentLabel>span').html(scrollPercentRounded);
-      if (scrollPercentRounded > 0) {
-        var scroller = document.getElementById("headerBar");
-        scroller.setAttribute("style", 
-          `margin: 0 0 0 0;
+    upToTop.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+    /*********/
+    /* Scroll Controller */
+    $(window).scroll(function(e) {
+        var scrollTop = $(window).scrollTop();
+        var docHeight = $(document).height();
+        var winHeight = $(window).height();
+        var scrollPercent = (scrollTop) / (docHeight - winHeight);
+        var scrollPercentRounded = Math.round(scrollPercent * 100);
+
+        $('#scrollPercentLabel>span').html(scrollPercentRounded);
+        if (scrollPercentRounded > 0) {
+            var scroller = document.getElementById("headerBar");
+            scroller.setAttribute("style",
+                `margin: 0 0 0 0;
            width: 100%;
            border-radius: 0;
            transition: .5s ease;
            filter: drop-shadow(0 10px 20px rgb(0, 0, 0, 0.75));
           `);
-        upToTop.addClass('show');
-      } else {
-        var scroller = document.getElementById("headerBar");
-        scroller.setAttribute("style", 
-          `margin: 100px 0 0 0; 
+            upToTop.addClass('show');
+        } else {
+            var scroller = document.getElementById("headerBar");
+            scroller.setAttribute("style",
+                `margin: 100px 0 0 0; 
            transition: .5s ease;
            width: 80%;
            filter: drop-shadow(0 5px 10px rgb(0, 0, 0, 0.67));
           `);
-        upToTop.removeClass('show');
-      }
-  });
+            upToTop.removeClass('show');
+        }
+    });
 
 });
 
@@ -148,72 +148,78 @@ $(document).ready(function() {
 
 /* Loader Controller */
 function closeLoader() {
-  var loader = document.getElementById("loader-container");
-  loader.setAttribute("style", `visibility: hidden`);
+    var loader = document.getElementById("loader-container");
+    loader.setAttribute("style", `visibility: hidden`);
 }
+
 function fadeOutLoader() {
-  var loaderBar = document.getElementById("loaderBar");
-  loaderBar.setAttribute("style", `filter: opacity(0%); transition: .8s ease;`);
+    var loaderBar = document.getElementById("loaderBar");
+    loaderBar.setAttribute("style", `filter: opacity(0%); transition: .8s ease;`);
 }
 
 /* Navigation Menu Controller */
 function openNav() {
-  document.getElementById("myNav").style.width = "100%";
+    document.getElementById("myNav").style.width = "100%";
 }
+
 function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
+    document.getElementById("myNav").style.width = "0%";
 }
 
 /* Navigation Bruh Controller */
 function openBruh() {
-  document.getElementById("bruh").innerHTML=`
+    document.getElementById("bruh").innerHTML = `
         <p>
           Ngưng thu nhỏ cái màn hình lại giúp tui.<br/>
           Trò này hong có vui đâu!!!
         </p>
   `;
-  document.getElementById("bruh").style.width = "100%";
+    document.getElementById("bruh").style.width = "100%";
 }
+
 function closeBruh() {
-  document.getElementById("bruh").style.width = "0%";
+    document.getElementById("bruh").style.width = "0%";
 }
 
 /* Navigation changePhone Controller */
 function openNoSupport() {
-  swal({
-    title: "Cảnh báo",
-    text: `Thiết bị này không được hỗ trợ để duyệt trang web này`,
-    button: "OK",
-    closeOnEsc: false,
-    timer: 5000
-  });
+    swal({
+        title: "Cảnh báo",
+        text: `Thiết bị này không được hỗ trợ để duyệt trang web này`,
+        button: "OK",
+        closeOnEsc: false,
+        timer: 5000
+    });
 }
+
 function openChangePhone() {
-  swal({
-    title: "Cảnh báo",
-    text: `Thiết bị của bạn có kích thước quá nhỏ
+    swal({
+        title: "Cảnh báo",
+        text: `Thiết bị của bạn có kích thước quá nhỏ
             Hãy sử dụng một màn hình lớn hơn để có trải nghiệm tốt nhất`,
-    button: "OK",
-    closeOnEsc: false,
-    timer: 5000
-  });
+        button: "OK",
+        closeOnEsc: false,
+        timer: 5000
+    });
 }
+
 function closeSwal() {
-  swal.close();
+    swal.close();
 }
 
 /* Switch headerBar */
 function switchToMenu() {
-  document.getElementById("headerLink").style.visibility = "hidden";
-  document.getElementById("headerMenu").style = `
+    document.getElementById("headerLink").style.visibility = "hidden";
+    document.getElementById("headerMenu").style = `
         visibility: visible;
         width: 70px;
         height: 70px;
   `;
 }
+
 function switchToLink() {
-  document.getElementById("headerLink").style.visibility = "visible";
-  document.getElementById("headerMenu").style = `
+    document.getElementById("headerLink").style.visibility = "visible";
+    document.getElementById("headerMenu").style = `
         visibility: hidden;
         width: 0;
         height: 0;
@@ -222,49 +228,52 @@ function switchToLink() {
 
 /* Back and Home Controller */
 function previousPage() {
-  window.history.back();
+    window.history.back();
 }
+
 function goToHomepage() {
-  setTimeout(function() {
-    window.location = "/";
-  }, 300);
+    setTimeout(function() {
+        window.location = "/";
+    }, 300);
 }
 
 /* Alert||Log Area */
 function printCurrentLocation() {
-  alert('Current location is: ' + window.location.href);
+    alert('Current location is: ' + window.location.href);
 }
 
 /* Location Controller */
 function getCurrentLocation() {
-  return new String(window.location.href);
+    return new String(window.location.href);
 }
+
 function getParameters(str) {
-  var url = str.split("?");
-  var params = url[1].split("&");
-  return params;
+    var url = str.split("?");
+    var params = url[1].split("&");
+    return params;
 }
 
 /* On Hover Controller */
 function openPopUp(popContainer) {
-  var popup = popContainer.getElementsByTagName("span");
-  popup[0].classList.remove("hide");
-  popup[0].classList.add("show");
+    var popup = popContainer.getElementsByTagName("span");
+    popup[0].classList.remove("hide");
+    popup[0].classList.add("show");
 }
+
 function closePopUp(popContainer) {
-  var popup = popContainer.getElementsByTagName("span");
-  popup[0].classList.remove("show");
-  popup[0].classList.add("hide");
+    var popup = popContainer.getElementsByTagName("span");
+    popup[0].classList.remove("show");
+    popup[0].classList.add("hide");
 }
 
 /* On Click Controller */
 function delayClick() {
-  setTimeout(function(){return;}, 5000);
+    setTimeout(function() { return; }, 5000);
 }
 
 /* View Film Controller */
 function viewFullFilm() {
-  document.getElementById("iframeView").innerHTML=`
+    document.getElementById("iframeView").innerHTML = `
     <iframe width="960" height="540" id="iframeFilm"
       src="https://www.youtube.com/embed/AF9ubNnnEtg?start=001;rel=0&amp;loop=1" 
       title="Full Film" frameborder="1" 
@@ -272,17 +281,18 @@ function viewFullFilm() {
       allowfullscreen>
     </iframe>
   `;
-  document.getElementById("switchIframeButton").innerHTML=`
+    document.getElementById("switchIframeButton").innerHTML = `
     <a>Xem Trailer</a>
   `;
-  $('#switchIframeButton').click(function() {
-      setTimeout(function() {
-        window.location = 'film-view.html?view=trailer';
-      }, 300);
-  });
+    $('#switchIframeButton').click(function() {
+        setTimeout(function() {
+            window.location = 'film-view.html?view=trailer';
+        }, 300);
+    });
 }
+
 function viewTrailer() {
-  document.getElementById("iframeView").innerHTML=`
+    document.getElementById("iframeView").innerHTML = `
     <iframe width="960" height="540" id="iframeTrailer"
         src="https://www.youtube.com/embed/llxrT4J2wZ4?start=001;rel=0&amp;loop=1" 
         title="Trailer Official" frameborder="" 
@@ -290,19 +300,19 @@ function viewTrailer() {
         allowfullscreen>
     </iframe>
   `;
-  document.getElementById("switchIframeButton").innerHTML=`
+    document.getElementById("switchIframeButton").innerHTML = `
     <a>Xem Phim</a>
   `;
-  $('#switchIframeButton').click(function() {
-      setTimeout(function() {
-        window.location = 'film-view.html?view=fullfilm';
-      }, 300);
-  });
+    $('#switchIframeButton').click(function() {
+        setTimeout(function() {
+            window.location = 'film-view.html?view=fullfilm';
+        }, 300);
+    });
 }
 
 function viewEkip() {
-  document.getElementsByTagName('footer')[0].setAttribute("style", 'top: 6000px');
-  document.getElementById("aboutUsContainer").innerHTML = `
+    document.getElementsByTagName('footer')[0].setAttribute("style", 'top: 6000px');
+    document.getElementById("aboutUsContainer").innerHTML = `
   <div class="about-ekip" id="ekip">
       <div class="title" id="ekipTitle">
           <a href="#">Về Ekip</a>
@@ -456,9 +466,10 @@ function viewEkip() {
   </div>
   `;
 }
+
 function viewProject() {
-  document.getElementsByTagName('footer')[0].setAttribute("style", 'top: 6400px');
-  document.getElementById("aboutUsContainer").innerHTML = `
+    document.getElementsByTagName('footer')[0].setAttribute("style", 'top: 6400px');
+    document.getElementById("aboutUsContainer").innerHTML = `
   <div class="about-ekip" id="ekip">
       <div class="title" id="ekipTitle">
           <a href="about-us.html?view=ekip">Về Ekip</a>
@@ -591,130 +602,5 @@ function viewProject() {
           </div>
       </div>
   </div>
-  `;
-}
-
-function viewCurse() {
-  document.getElementById("aboutMovieContainer").innerHTML = `
-  <div class="about-curse" id="curse">
-    <div class="title">
-        <a href="#">Lời Nguyền Ánh Trăng</a>
-    </div>
-    <div class="content" id="curseContentWrapped">
-        <div class="about-curse-1">
-            <div class="text">
-                <h2>“KỲ ÁN ÁNH TRĂNG” - Lời nguyền đêm rằm ma quái</h2>
-                <div class="bruh-line"></div>
-                <p>
-                Sinh viên Đại học Y thành phố K truyền tai nhau rằng: Hễ cứ đến ngày rằm tháng 5, sẽ có một nữ sinh viên nhảy lầu tự tử tại phòng 105. Chưa hết, lúc đó sẽ vang lên nhạc khúc Moonlight Sonata quỷ quyệt. Và cứ như thế, đêm rằm tháng 5 hàng năm, không biết tự lúc nào, kí túc xá nữ Đại học Y luôn thấp thỏm lo sợ. Liệu lời nguyền đêm nay sẽ thuộc về cô gái xấu số nào? 
-                </p>
-            </div>
-            <div class="image">
-                <img src="source/about-movie/curse.jpg">
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class="about-meet" id="project">
-      <div class="title">
-          <a href="about-movie.html?view=meet">Cuộc gặp gỡ định mệnh</a>
-      </div>
-  </div>
-  <div class="about-real" id="project">
-      <div class="title">
-          <a href="about-movie.html?view=real">Chân tướng sự thật</a>
-      </div>
-  </div>
-  `;
-}
-
-function viewMeet() {
-  document.getElementById("aboutMovieContainer").innerHTML = `
-  <div class="about-curse" id="curse">
-    <div class="title">
-        <a href="about-movie.html?view=curse">Lời Nguyền Ánh Trăng</a>
-    </div>
-  </div>
-  <div class="about-meet" id="project">
-      <div class="title">
-          <a href="#">Cuộc gặp gỡ định mệnh</a>
-      </div>
-      <div class="content" id="curseContentWrapped">
-        <div class="about-curse-1">
-            <div class="text">
-                <h2>“KỲ ÁN ÁNH TRĂNG” - Những kẻ lập dị</h2>
-                <div class="bruh-line"></div>
-                <p>
-                “Người ta thường nói: Những người lập dị thường hay thu hút những kẻ lập dị khác. Và trường hợp đó đúng cho cả hai ta, nhỉ?”. Trích lời chào hỏi của vị thám tử Trần Đông dành cho lần gặp gỡ đầu tiên với Huyên Linh - nhân vật chính. Cuộc gặp gỡ định mệnh ấy diễn ra vào đầu tháng 5 âm lịch, khi lời nguyền cận kề và cũng là lúc cặp đôi này quyết định lên đường tìm kiếm sự thật. Nhưng liệu phải chăng một mối quan hệ chóng vánh sẽ dễ đánh mất lòng tin? Một trong hai đã phát giác được dấu hiệu của kẻ phản bội! 
-                </p>
-            </div>
-            <div class="image">
-                <img src="source/about-movie/meet.jpg">
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class="about-real" id="project">
-      <div class="title">
-          <a href="about-movie.html?view=real">Chân tướng sự thật</a>
-      </div>
-  </div>
-  `;
-}
-
-function viewReal() {
-  document.getElementById("aboutMovieContainer").innerHTML = `
-  <div class="about-curse" id="curse">
-    <div class="title">
-        <a href="about-movie.html?view=curse">Lời Nguyền Ánh Trăng</a>
-    </div>
-  </div>
-  <div class="about-meet" id="project">
-      <div class="title">
-          <a href="about-movie.html?view=meet">Cuộc gặp gỡ định mệnh</a>
-      </div>
-  </div>
-  <div class="about-real" id="project">
-      <div class="title">
-          <a href="#">Chân tướng sự thật</a>
-      </div>
-      <div class="content" id="curseContentWrapped">
-        <div class="about-curse-1">
-            <div class="text">
-                <h2>“KỲ ÁN ÁNH TRĂNG” - Chương Presto Agitato</h2>
-                <div class="bruh-line"></div>
-                <p>
-                Đã một tuần trôi qua kể từ khi Huyên Linh đặt chân đến KTX Đại học Y thành phố K để tìm kiếm sự thật. Đêm mai nữa thôi, lời nguyền sẽ lấy mạng người con gái đó - người mà cô hết mực trân quý. Hành trình tiệm cận câu trả lời đã đến hồi gay cấn. Từng manh mối và dấu vết ngày càng hiện rõ, chẳng mấy chốc, chương cuối của Moonlight Sonata sẽ vén màn!
-                Liệu khao khát vén màn sự thật của Huyên Linh có thể đặt dấu chấm hết cho chương Presto Agitato này?
-                </p>
-            </div>
-            <div class="image">
-                <img src="source/about-movie/real.jpg">
-            </div>
-        </div>
-    </div>
-  </div>
-  `;
-}
-
-function landingShowMore() {
-  document.getElementById("landingShowContent").innerHTML = `
-    <p>
-        Nội dung chính của phim xoay quanh Huyên Linh- một cô gái
-      mẫn tuệ, có khả năng quan sát và suy luận sắc bén.
-    </p>
-    <p>
-        Liệu những bí ẩn quanh căn phòng 105, bản sonata ánh trăng
-      rợn người và những cái chết kỳ bí của các cô gái trẻ hằng năm
-      sẽ có lời giải đáp? Liệu Huyên Linh có tìm thấy công lý cho
-      bản thân và cho cả những người mà cô yêu thương? Tất cả phải
-      chăng sẽ theo đúng như những gì cô mong muốn?
-    </p>
-    <a id="showLess" onclick="landingShowLess()">Ẩn bớt <i class="fa fa-toggle-down"></i></a>
-  `;
-}
-function landingShowLess() {
-  document.getElementById("landingShowContent").innerHTML = `
-    <a id="showMore" onclick="landingShowMore()">Xem thêm <i class="fa fa-toggle-down"></i></a>
   `;
 }

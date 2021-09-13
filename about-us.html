@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <!-- site metas -->
-    <title>Về Chúng Mình</title>
+    <title>About Us - Kỳ Án Ánh Trăng</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -30,7 +30,7 @@
     <div id="loader-container">
         <div class="loader" id="loaderBar"></div>
     </div>
-    
+
     <header id="header">
         <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -41,16 +41,14 @@
                 <a href="about-movie.html?view=curse">
                     Về Kỳ Án Ánh Trăng
                 </a>
-                <a href="FAQs.html">
+                <a href="https://forms.gle/ueF5RWAo9tSNfXos6" target="blank">
                     Những Câu Hỏi Thường Gặp
                 </a>
             </div>
         </div>
         <div class="header-container" id="headerBar">
             <div class="header-kv">
-                <img alt="mini kv" id="HomepageKV" 
-                    src="source/mini-kv.png" 
-                    onclick="goToHomepage()">
+                <img alt="mini kv" id="HomepageKV" src="source/mini-kv.png" onclick="goToHomepage()">
             </div>
             <div class="header-menu" id="headerMenu">
                 <span style="
@@ -59,8 +57,7 @@
                             z-index: 100;
                             color: rgba(242, 208, 146, 1);
 
-                            " 
-                        onclick="openNav()">
+                            " onclick="openNav()">
                     &#9776;
                 </span>
             </div>
@@ -76,7 +73,7 @@
                     </a>
                 </div>
                 <div>
-                    <a href="FAQs.html">
+                    <a href="https://forms.gle/ueF5RWAo9tSNfXos6" target="blank">
                         Những Câu Hỏi Thường Gặp
                     </a>
                 </div>
@@ -91,7 +88,7 @@
             <img alt="Messenger Chat" src="source/messenger-flipped-recolored-2.png">
         </a>
     </div>
-    
+
     <div class="up-to-top">
         <a id="topButton"></a>
     </div>
@@ -118,19 +115,17 @@
             </div>
             <div class="footer-copyright">
                 <p>
-                    ©2021 LƯU LY SẢN XUẤT ĐỘI. ALL RIGHTS RESERVED<br/>
-                    All trademarks referenced herein are the properties 
-                    of their respective owners.
+                    ©2021 LƯU LY SẢN XUẤT ĐỘI. ALL RIGHTS RESERVED<br/> All trademarks referenced herein are the properties of their respective owners.
                 </p>
             </div>
         </div>
     </footer>
-    
+
     <!-- tracking field -->
     <div class="something-bruh" id="bruh"></div>
 </body>
 
-<script src="js/event.js" ></script>
+<script src="js/event.js"></script>
 <script>
     var firstParam = new Array(getParameters(getCurrentLocation()))[0];
     if (firstParam != null) {
@@ -139,10 +134,15 @@
             viewEkip();
         } else if (view[1] == "project") {
             viewProject();
-        } else {
-            var iframe = document.getElementById('iframeContainer')
-            iframe.innerText = 'Something went wrong...';
-            iframe.setAttribute("style", `
+        } else
+            wrongParam();
+    } else
+        wrongParam();
+
+    function wrongParam() {
+        var iframe = document.getElementById('iframeContainer')
+        iframe.innerText = 'Something went wrong...';
+        iframe.setAttribute("style", `
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -150,8 +150,9 @@
                                 font-size: 5vw;
                                 font-family: Montserrat;
                                 `);
-            alert("Wrong parameter!!!");
-        }
+        alert("Wrong parameter!!!");
+        location.href += '/404.html';
     }
 </script>
+
 </html>
