@@ -217,6 +217,11 @@ a.effect-underline:hover:after {
     transform: translate(-15px, -10px) scale(1.5);
 }
 
+#btnMute:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+    transition: .5s;
+}
 
 /* About Movie */
 
@@ -259,6 +264,10 @@ a.effect-underline:hover:after {
     -webkit-animation: glowing .5s ease-in-out infinite alternate;
     -moz-animation: glowing .5s ease-in-out infinite alternate;
     animation: glowing .5s ease-in-out infinite alternate;
+}
+
+.no-hover {
+    pointer-events: none;
 }
 
 

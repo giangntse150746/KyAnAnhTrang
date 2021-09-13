@@ -1,22 +1,25 @@
 @charset "utf-8";
-
 .header-link div:first-of-type a {
     font-weight: 1000;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 1),
-                 0 0 6px rgba(242, 208, 146, 1);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 1), 0 0 6px rgba(242, 208, 146, 1);
 }
+
 h2 {
     color: rgba(242, 208, 146, 1);
 }
+
+
 /*
 p {
     word-wrap: break-word;
     white-space:pre-wrap;
 }
 */
+
 a {
     text-decoration: none;
 }
+
 .title {
     width: 300px;
     height: 80px;
@@ -24,6 +27,7 @@ a {
     display: flex;
     justify-content: center;
 }
+
 .title a {
     color: rgba(242, 208, 146, 1);
     width: 270px;
@@ -37,11 +41,14 @@ a {
     transition: .2s;
 }
 
+
 /* .about-us::First-part */
+
 .about-us {
     width: 100%;
     position: absolute;
 }
+
 .about-ekip {
     width: 80%;
     position: absolute;
@@ -51,52 +58,68 @@ a {
     right: 10%;
     top: 160px;
 }
+
 .about-ekip .content {
     width: 100%;
     position: relative;
 }
-.content .about-ekip-2, .about-ekip-3, .about-ekip-4, .about-ekip-5, .about-ekip-6 {
+
+.content .about-ekip-2,
+.about-ekip-3,
+.about-ekip-4,
+.about-ekip-5,
+.about-ekip-6 {
     width: 100%;
     float: left;
     height: 960px;
 }
+
 .content .about-ekip-1 {
     width: 100%;
     float: left;
     height: 880px;
 }
+
 .text {
-    width: 80%;
+    width: 100%;
     float: left;
     font-size: 20px;
     overflow: auto;
-    line-height: 27px;
+    line-height: 32px;
+    text-align: justify;
 }
 
+
 /* .about-ekip-1 */
+
 .ekip-preview {
-    width: 50%;
+    width: 40%;
     float: left;
     margin-top: 36px;
 }
+
 .ekip-reveal {
-    width: 50%;
+    width: 60%;
     float: left;
     height: 560px;
     margin-top: 36px;
     background-color: rgba(242, 208, 146, 0.5);
 }
+
 .ekip-preview div div {
     width: 140px;
     float: left;
     height: 140px;
-
 }
-.ekip-preview .first-area, .second-area, .third-area {
+
+.ekip-preview .first-area,
+.second-area,
+.third-area {
     width: 100%;
     float: left;
     height: 140px;
 }
+
 .ekip-preview img {
     width: 120px;
     float: left;
@@ -106,7 +129,9 @@ a {
     filter: brightness(90%);
 }
 
+
 /* .about-ekip-2,3,4,5,6 */
+
 .image {
     width: 100%;
     float: left;
@@ -114,12 +139,16 @@ a {
     display: flex;
     justify-content: center;
 }
-.image img, video {
+
+.image img,
+video {
     margin-top: 50px;
     height: 600px;
 }
 
+
 /* .about-us::Second-part */
+
 .about-project {
     width: 80%;
     position: absolute;
@@ -129,38 +158,47 @@ a {
     right: 10%;
     top: 160px;
 }
+
 .about-project .content {
     width: 100%;
     position: relative;
 }
+
 .about-project .title {
     margin-left: 300px;
 }
+
 .content .about-project-1 {
     width: 100%;
     float: left;
     height: 1000px;
 }
+
 .content .about-project-2 {
     width: 100%;
     float: left;
     height: 1220px;
 }
+
 .about-project-2 .image {
     height: 900px;
 }
+
 .about-project-2 .image img {
     height: 800px;
 }
+
 .content .about-project-3 {
     width: 100%;
     float: left;
     height: 2960px;
 }
+
 .extra-text {
     width: 100%;
     float: left;
 }
+
 .content .about-project-4 {
     width: 100%;
     float: left;
@@ -173,10 +211,12 @@ a {
     margin-left: 12%;
     text-align: center;
 }
+
 .extra-text p {
     margin-bottom: 30px;
     font-style: italic;
 }
+
 .extra-text-1 {
     width: 60%;
     float: left;
@@ -186,13 +226,14 @@ a {
 }
 
 .content p, h2, span {
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.67));
+    /*filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.67));*/
 }
 
 p span {
     font-weight: bold;
-    filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.67));
+    /*filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.67));*/
 }
+
 footer h2 {
     color: #000;
 }

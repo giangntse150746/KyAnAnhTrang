@@ -42,7 +42,7 @@
                     Về Kỳ Án Ánh Trăng
                 </a>
                 <a href="https://forms.gle/ueF5RWAo9tSNfXos6" target="blank">
-                    Những Câu Hỏi Thường Gặp
+                    Gửi Thư Cho Chúng Mình
                 </a>
             </div>
         </div>
@@ -74,7 +74,7 @@
                 </div>
                 <div>
                     <a href="https://forms.gle/ueF5RWAo9tSNfXos6" target="blank">
-                        Những Câu Hỏi Thường Gặp
+                        Gửi Thư Cho Chúng Mình
                     </a>
                 </div>
             </div>
@@ -137,18 +137,14 @@
         } else if (view[1] == "real") {
             viewReal();
         } else {
-            var iframe = document.getElementById('iframeContainer')
-            iframe.innerText = 'Something went wrong...';
-            iframe.setAttribute("style", `
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                color: #F2D092;
-                                font-size: 5vw;
-                                font-family: Montserrat;
-                                `);
-            alert("Wrong parameter!!!");
+            wrongParam();
         }
+    } else
+        wrongParam();
+
+    function wrongParam() {
+        alert("Wrong parameter!!!");
+        location.href = location.origin + '/404.html';
     }
 </script>
 

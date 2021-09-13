@@ -45,24 +45,6 @@ a {
 
 /* .about-movie::First-part */
 
-.about-movie {
-    width: 100%;
-    position: absolute;
-}
-
-.about-ekip {
-    width: 80%;
-    position: absolute;
-    display: block;
-    box-sizing: border-box;
-    left: 10%;
-    right: 10%;
-    top: 160px;
-}
-
-
-/* .about-movie::Second-part */
-
 .about-curse {
     width: 80%;
     position: absolute;
@@ -78,29 +60,20 @@ a {
     position: relative;
 }
 
-.content .about-curse-1 {
+.content .content-container {
     width: 100%;
     float: left;
     height: 900px;
 }
 
-.about-curse-1 p {
-    width: 60%;
-    line-height: 27px;
-}
-
-.image {
+.text p {
     width: 100%;
-    float: left;
-    height: auto;
-    display: flex;
-    justify-content: center;
+    line-height: 32px;
+    font-size: 20px;
+    text-align: justify;
 }
 
-.image img {
-    margin-top: 50px;
-    height: 600px;
-}
+/* .about-movie::Second-part */
 
 .about-meet {
     width: 80%;
@@ -116,6 +89,8 @@ a {
     margin-left: 320px;
 }
 
+/* .about-movie::Third-part */
+
 .about-real {
     width: 80%;
     position: absolute;
@@ -130,8 +105,17 @@ a {
     margin-left: 660px;
 }
 
-.light-up {
-    filter: grayscale(1) brightness(1.2);
+.image {
+    width: 100%;
+    float: left;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    margin-top: 50px;
+    width: 60vw;
 }
 
 footer {

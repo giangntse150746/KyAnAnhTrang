@@ -127,12 +127,12 @@
     height: 480px;
     margin-right: 10%;
     margin-top: 2%;
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.67));
 }
 
 .inspire .text-inspire p {
     font-size: large;
-    line-height: 30px;
+    line-height: 36px;
+    font-size: 20px;
     height: 360px;
 }
 
@@ -181,7 +181,6 @@
     margin-bottom: 36px;
     float: left;
     height: 480px;
-    background-color: rgba(242, 208, 146, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -383,7 +382,6 @@
     filter: brightness(1.1);
     text-shadow: 0 0 1px rgba(255, 255, 255, 1), 0 0 6px rgba(242, 208, 146, 1);
 }
-
 
 /* Footer */
 

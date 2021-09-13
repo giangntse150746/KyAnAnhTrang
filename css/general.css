@@ -287,15 +287,31 @@ header {
 }
 
 .border-dash {
-    border: 3px solid #F2D092;
+    border: 2px solid #F2D092;
     border-radius: 36px;
     border-style: dashed;
+}
+
+.border-line {
+    border: 2px solid #F2D092;
+    border-radius: 36px;
+}
+
+.display-1 {
+    font-size: 60px;
+}
+
+.h3 {
+    font-size: 24px;
 }
 
 .text-justify {
     text-align: justify;
 }
 
+.light-up {
+    filter: grayscale(1) brightness(1.2);
+}
 
 /* Chat With Us */
 
@@ -318,6 +334,33 @@ header {
     filter: drop-shadow(0 5px 3px #000);
 }
 
+.background-audio {
+    width: 100%;
+    height: 162px;
+    position: fixed;
+    z-index: 0;
+}
+
+#btnMute {
+    float: right;
+    top: 640px;
+    margin-right: 10px;
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    background-color: #F2D092;
+    position: relative;
+    z-index: 10;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .67));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    transition: .3s;
+}
+#btnMute i {
+    font-size: 36px;
+}
 
 /* Footer */
 

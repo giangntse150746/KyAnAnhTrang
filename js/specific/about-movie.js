@@ -1,11 +1,11 @@
 function viewCurse() {
     document.getElementById("aboutMovieContainer").innerHTML = `
   <div class="about-curse" id="curse">
-    <div class="title light-up">
+    <div class="title light-up no-hover">
         <a href="#">Lời Nguyền Ánh Trăng</a>
     </div>
     <div class="content" id="curseContentWrapped">
-        <div class="about-curse-1">
+        <div class="content-container">
             <div class="text">
                 <h2>“KỲ ÁN ÁNH TRĂNG” - Lời nguyền đêm rằm ma quái</h2>
                 <div class="bruh-line"></div>
@@ -19,12 +19,12 @@ function viewCurse() {
         </div>
     </div>
   </div>
-  <div class="about-meet" id="project">
+  <div class="about-meet" id="meet">
       <div class="title">
           <a href="about-movie.html?view=meet">Cuộc gặp gỡ định mệnh</a>
       </div>
   </div>
-  <div class="about-real" id="project">
+  <div class="about-real" id="curse">
       <div class="title">
           <a href="about-movie.html?view=real">Chân tướng sự thật</a>
       </div>
@@ -40,12 +40,12 @@ function viewMeet() {
         <a href="about-movie.html?view=curse">Lời Nguyền Ánh Trăng</a>
     </div>
   </div>
-  <div class="about-meet" id="project">
-      <div class="title light-up">
+  <div class="about-meet" id="meet">
+      <div class="title light-up no-hover">
           <a href="#">Cuộc gặp gỡ định mệnh</a>
       </div>
       <div class="content" id="curseContentWrapped">
-        <div class="about-curse-1">
+        <div class="content-container">
             <div class="text">
                 <h2>“KỲ ÁN ÁNH TRĂNG” - Những kẻ lập dị</h2>
                 <div class="bruh-line"></div>
@@ -59,7 +59,7 @@ function viewMeet() {
         </div>
     </div>
   </div>
-  <div class="about-real" id="project">
+  <div class="about-real" id="real">
       <div class="title">
           <a href="about-movie.html?view=real">Chân tướng sự thật</a>
       </div>
@@ -74,17 +74,17 @@ function viewReal() {
         <a href="about-movie.html?view=curse">Lời Nguyền Ánh Trăng</a>
     </div>
   </div>
-  <div class="about-meet" id="project">
+  <div class="about-meet" id="meet">
       <div class="title">
           <a href="about-movie.html?view=meet">Cuộc gặp gỡ định mệnh</a>
       </div>
   </div>
-  <div class="about-real" id="project">
-      <div class="title light-up">
+  <div class="about-real" id="real">
+      <div class="title light-up no-hover">
           <a href="#">Chân tướng sự thật</a>
       </div>
       <div class="content" id="curseContentWrapped">
-        <div class="about-curse-1">
+        <div class="content-container">
             <div class="text">
                 <h2>“KỲ ÁN ÁNH TRĂNG” - Chương Presto Agitato</h2>
                 <div class="bruh-line"></div>
@@ -100,5 +100,5 @@ function viewReal() {
     </div>
   </div>
   `;
-
+  document.getElementsByTagName('footer')[0].style.top = '1280px';
 }

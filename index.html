@@ -49,7 +49,7 @@
                     Về Kỳ Án Ánh Trăng
                 </a>
                 <a href="https://forms.gle/ueF5RWAo9tSNfXos6" target="blank" class="effect-underline">
-                    Những Câu Hỏi Thường Gặp
+                    Gửi Thư Cho Chúng Mình
                 </a>
             </div>
         </div>
@@ -129,9 +129,15 @@
             <img src="source/landing/2.png" alt="" />
         </div>
         <div class="characters">
-            <div class="character-reveal border-dash" id="characterInfo">
+            <div class="character-reveal border-line" id="characterInfo">
                 <div id="reveal-none" class="all side">
-                    <h1>Pick a character to find out interest things...</h1>
+                    <h1 class="display-1">
+                        Hãy chọn 1 nhân vật
+                    </h1>
+                    <p class="h3">
+                        chúng mình sẽ cho bạn biết người đó là mảnh ghép bí ẩn nào 
+                        trong bản sonata ánh trăng đầy kỳ bí này...
+                    </p>
                 </div>
                 <!-- Reveal -->
             </div>
@@ -241,6 +247,16 @@
                 Xem Phim <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </a>
         </div>
+    </div>
+
+    <div class="background-audio">
+        <div id="btnMute" onclick="muteAudio()">
+            <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </div>
+        <audio id="bgAudio" autoplay infinite>
+            <source src="source/ost.mp3" type="audio/mpeg">
+            Your browser does not support the audio.
+        </audio>
     </div>
 
     <div class="chat-with-us">

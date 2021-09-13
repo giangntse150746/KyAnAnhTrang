@@ -35,7 +35,7 @@ const revealTranDong = `
 
 const revealAnNhien = `
     <div class="left-side">
-        <img src="source/landing/character-reveal/TranDong.png" alt="reveal-AnNhien">
+        <img src="source/landing/character-reveal/AnNhien.png" alt="reveal-AnNhien">
     </div>
     <div class="right-side">
         <h2>
