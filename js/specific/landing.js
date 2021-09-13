@@ -139,7 +139,7 @@ const revealHuyenKhanh = `
 
 function reveal(content) {
     document.getElementById('characterInfo').innerHTML = content;
-    console.log(content);
+    //console.log(content);
 }
 
 function triggerReveal(previewContainer) {

@@ -143,7 +143,8 @@ $(document).ready(function() {
     });
 
     /* Background song controls */
-    document.getElementById("bgAudio").volume = 0.3;
+    if (document.getElementById("bgAudio") != null)
+        document.getElementById("bgAudio").volume = 0.3;
 });
 
 /************************************************************** */
