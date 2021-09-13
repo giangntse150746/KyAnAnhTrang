@@ -378,7 +378,7 @@ header {
   width: 100%;
   height: 162px;
   position: fixed;
-  z-index: 0;
+  z-index: 3;
 }
 
 #btnMute {
@@ -394,8 +394,8 @@ header {
   filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.67));
   display: flex;
   justify-content: center;
+  z-index: 10;
   align-items: center;
-  z-index: 4;
   transition: 0.3s;
 }
 
