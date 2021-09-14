@@ -35,6 +35,15 @@
     <div id="loader-container">
         <div class="loader" id="loaderBar"></div>
     </div>
+    
+    <div class="background-audio" id="bgAudio-container">
+        <div id="btnMute" onclick="muteAudio()">
+            <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </div>
+        <audio id="bgAudio" src="source/ost.mp3" type="audio/mpeg" allow="autoplay" autoplay loop>
+            Your browser does not support the audio.
+        </audio>
+    </div>
 
     <header id="header">
         <div id="myNav" class="overlay">
@@ -247,16 +256,6 @@
                 Xem Phim <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </a>
         </div>
-    </div>
-
-    <div class="background-audio">
-        <div id="btnMute" onclick="muteAudio()">
-            <i class="fa fa-volume-up" aria-hidden="true"></i>
-        </div>
-        <audio id="bgAudio" autoplay infinite>
-            <source src="source/ost.mp3" type="audio/mpeg">
-            Your browser does not support the audio.
-        </audio>
     </div>
 
     <div class="chat-with-us">

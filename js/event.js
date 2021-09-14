@@ -7,6 +7,28 @@ function onLoadAlert() {
         button: "OK",
     });
 }
+function askForSound() {
+    swal({
+        title: "Welcome to Kỳ Án Ánh Trăng",
+        text: "Bạn có muốn một chút nhạc?",
+        button: "Of course!"
+    })
+    .then((value) => {
+        switch (value) {
+            case "catch":
+                swal("Poof! Your imaginary file has been deleted!", {
+                    title: "The song is ON",
+                    icon: "success",
+                    button: "Let's Explore!"
+                });
+                break;
+            default:
+                swal("Keep working!");
+                playTheMusic();
+                break;
+        }
+    });
+}
 
 /************************************************************** */
 /*
@@ -47,7 +69,7 @@ var windowsize = $(window).width();
 
 changeHeaderBar();
 
-$(window).resize(function() {
+$(window).resize(function () {
     windowsize = $(window).width();
     changeHeaderBar();
 });
@@ -74,23 +96,25 @@ function changeHeaderBar() {
 
 /************************************************************** */
 
-$(document).on('touchmove', function(e) {
+$(document).on('touchmove', function (e) {
     e.preventDefault();
 });
 
 /************************************************************** */
 
 /* After Ready Events */
-$(document).ready(function() {
+$(document).ready(function () {
 
     if (history.scrollRestoration) {
         history.scrollRestoration = 'manual';
     } else {
-        window.onbeforeunload = function() {
+        window.onbeforeunload = function () {
             window.scrollTo(0, 0);
         }
     }
     /*********/
+
+    askForSound();
 
     /* Customize Wheel's Range */
     //  $('html, body').mousewheel(function(e, delta) {
@@ -106,13 +130,13 @@ $(document).ready(function() {
     /* Scroll Top */
     var upToTop = $('#topButton');
 
-    upToTop.on('click', function(e) {
+    upToTop.on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, '300');
     });
     /*********/
     /* Scroll Controller */
-    $(window).scroll(function(e) {
+    $(window).scroll(function (e) {
         var scrollTop = $(window).scrollTop();
         var docHeight = $(document).height();
         var winHeight = $(window).height();
@@ -141,6 +165,7 @@ $(document).ready(function() {
             upToTop.removeClass('show');
         }
     });
+
 });
 
 /************************************************************** */
@@ -231,7 +256,7 @@ function previousPage() {
 }
 
 function goToHomepage() {
-    setTimeout(function() {
+    setTimeout(function () {
         window.location = "/";
     }, 300);
 }
@@ -267,5 +292,43 @@ function closePopUp(popContainer) {
 
 /* On Click Controller */
 function delayClick() {
-    setTimeout(function() { return; }, 5000);
+    setTimeout(function () { return; }, 5000);
+}
+
+function muteAudio() {
+    var state = document.getElementById("bgAudio").muted;
+    if (state === true) {
+        document.getElementById("btnMute").innerHTML = '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+        document.getElementById("bgAudio").muted = false;
+    }
+    else {
+        document.getElementById("btnMute").innerHTML = '<i class="fa fa-volume-off" aria-hidden="true"></i>';
+        document.getElementById("bgAudio").muted = true;
+    }
+}
+
+setTimeout(function () {
+    var player = document.getElementById('bgAudio');
+    var playedPromise = player.play();
+    if (playedPromise) {
+        playedPromise.catch((e) => {
+            console.log(e)
+            if (e.name === 'NotAllowedError' || e.name === 'NotSupportedError') {
+                console.log(e.name);
+            }
+        }).then(() => {
+            console.log("playing sound !!!");
+        });
+    }
+}, 500);
+
+function playTheMusic() {
+    document.getElementById("bgAudio-container").innerHTML = `
+        <div id="btnMute" onclick="muteAudio()">
+            <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </div>
+        <audio id="bgAudio" src="source/ost.mp3" type="audio/mpeg" allow="autoplay" autoplay loop>
+            Your browser does not support the audio.
+        </audio>
+    `;
 }
