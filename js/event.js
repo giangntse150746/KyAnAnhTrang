@@ -10,21 +10,16 @@ function onLoadAlert() {
 function askForSound() {
     swal({
         text: "Bạn có muốn một chút nhạc?",
-        button: "Of course!"
+        button: "Tất nhiên rồi!"
     })
     .then((value) => {
+        playTheMusic();
         switch (value) {
-            case "catch":
-                swal("Poof! Your imaginary file has been deleted!", {
-                    title: "The song is ON",
-                    icon: "success",
-                    button: "Let's Explore!"
-                });
-                break;
             default:
-                swal("Keep working!");
-                playTheMusic();
-                break;
+                swal({
+                    text: "Cảm ơn đã ghé thăm trang web của chúng mình! Have fun ^^",
+                    button: "OK"
+                });
         }
     });
 }
@@ -85,7 +80,7 @@ function changeHeaderBar() {
             closeSwal();
             switchToMenu();
         }
-    } else if (windowsize <= 720) {
+    } else if (windowsize <= 768) {
         switchToMenu();
     } else {
         switchToLink();
@@ -112,8 +107,10 @@ $(document).ready(function () {
         }
     }
     /*********/
-
-    askForSound();
+    /* Play Music */
+    if (document.getElementById("bgAudio-container") != null)
+        askForSound();
+    /*********/
 
     /* Customize Wheel's Range */
     //  $('html, body').mousewheel(function(e, delta) {
@@ -126,6 +123,7 @@ $(document).ready(function () {
     setTimeout(fadeOutLoader, 0);
     setTimeout(closeLoader, 1000);
     /*********/
+
     /* Scroll Top */
     var upToTop = $('#topButton');
 
@@ -306,20 +304,6 @@ function muteAudio() {
     }
 }
 
-setTimeout(function () {
-    var player = document.getElementById('bgAudio');
-    var playedPromise = player.play();
-    if (playedPromise) {
-        playedPromise.catch((e) => {
-            console.log(e)
-            if (e.name === 'NotAllowedError' || e.name === 'NotSupportedError') {
-                console.log(e.name);
-            }
-        }).then(() => {
-            console.log("playing sound !!!");
-        });
-    }
-}, 500);
 
 function playTheMusic() {
     document.getElementById("bgAudio-container").innerHTML = `
@@ -330,4 +314,18 @@ function playTheMusic() {
             Your browser does not support the audio.
         </audio>
     `;
+    setTimeout(function () {
+        var player = document.getElementById('bgAudio');
+        var playedPromise = player.play();
+        if (playedPromise) {
+            playedPromise.catch((e) => {
+                console.log(e)
+                if (e.name === 'NotAllowedError' || e.name === 'NotSupportedError') {
+                    console.log(e.name);
+                }
+            }).then(() => {
+                console.log("playing sound !!!");
+            });
+        }
+    }, 100);
 }

@@ -1,6 +1,6 @@
 const revealHuyenLinh = `
     <div class="left-side">
-        <img src="source/landing/character-reveal/HuyenLinh.png" alt="reveal-HuyenLinh">
+        <img src="source/landing/character-reveal/mini-HuyenLinh.png" alt="reveal-HuyenLinh">
     </div>
     <div class="right-side">
         <h2>
@@ -18,7 +18,7 @@ const revealHuyenLinh = `
 
 const revealTranDong = `
     <div class="left-side">
-        <img src="source/landing/character-reveal/TranDong.png" alt="reveal-TranDong">
+        <img src="source/landing/character-reveal/mini-TranDong.png" alt="reveal-TranDong">
     </div>
     <div class="right-side">
         <h2>
@@ -35,7 +35,7 @@ const revealTranDong = `
 
 const revealAnNhien = `
     <div class="left-side">
-        <img src="source/landing/character-reveal/AnNhien.png" alt="reveal-AnNhien">
+        <img src="source/landing/character-reveal/mini-AnNhien.png" alt="reveal-AnNhien">
     </div>
     <div class="right-side">
         <h2>
@@ -43,7 +43,7 @@ const revealAnNhien = `
         </h2>
         <div class="bruh-line"></div>
         <p>
-            An Nhiên, đúng như cái tên: là một cô bé vô ưu vô lo, có cả một chút ngây ngô của tuổi mới lớn. Cũng bởi vậy, khi phát hiện Huyên Linh là người mới chuyển đến trường nhưng lại học giỏi hơn mình, cô cứ vậy mà giận dỗi những nỗi niềm rất trẻ con. Trong
+            An Nhiên, đúng như cái tên: một cô bé vô ưu vô lo, có cả chút ngây ngô của tuổi mới lớn. Cũng bởi vậy, khi phát hiện Huyên Linh là người mới chuyển đến trường nhưng lại học giỏi hơn mình, cô cứ vậy mà giận dỗi những nỗi niềm rất trẻ con. Trong
             mắt cô, Huyên Linh là đồ đáng ghét, là người trông chẳng xinh đẹp tí nào…
             <br/>
             Chuyện gì sẽ đến với An Nhiên? Liệu cô có an toàn trước những biến cố sắp sửa xảy ra? Mối quan hệ giữa cô và Huyên Linh rồi sẽ ra sao? Hay ánh trăng rồi sẽ nuốt chửng tất cả...
@@ -53,7 +53,7 @@ const revealAnNhien = `
 
 const revealNguoiGia = `
     <div class="left-side">
-        <img src="source/landing/character-reveal/NguoiGia.png" alt="reveal-NguoiGia">
+        <img src="source/landing/character-reveal/mini-NguoiGia.png" alt="reveal-NguoiGia">
     </div>
     <div class="right-side">
         <h2>
@@ -71,7 +71,7 @@ const revealNguoiGia = `
 
 const revealTruongLam = `
     <div class="left-side">
-        <img src="source/landing/character-reveal/TruongLam.png" alt="reveal-TruongLam">
+        <img src="source/landing/character-reveal/mini-TruongLam.png" alt="reveal-TruongLam">
     </div>
     <div class="right-side">
         <h2>
@@ -88,7 +88,7 @@ const revealTruongLam = `
 
 const revealHaVi = `
     <div class="left-side">
-        <img src="source/landing/character-reveal/HaVi.png" alt="reveal-HaVi">
+        <img src="source/landing/character-reveal/mini-HaVi.png" alt="reveal-HaVi">
     </div>
     <div class="right-side">
         <h2>
@@ -105,7 +105,7 @@ const revealHaVi = `
 
 const revealBaoTran = `
     <div class="left-side">
-        <img src="source/landing/character-reveal/BaoTran.png" alt="reveal-BaoTran">
+        <img src="source/landing/character-reveal/mini-BaoTran.png" alt="reveal-BaoTran">
     </div>
     <div class="right-side">
         <h2>
@@ -122,7 +122,7 @@ const revealBaoTran = `
 
 const revealHuyenKhanh = `
     <div class="left-side">
-        <img src="source/landing/character-reveal/HuyenKhanh.png" alt="reveal-HuyenKhanh">
+        <img src="source/landing/character-reveal/mini-HuyenKhanh.png" alt="reveal-HuyenKhanh">
     </div>
     <div class="right-side">
         <h2>

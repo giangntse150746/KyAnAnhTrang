@@ -374,35 +374,6 @@ header {
   filter: drop-shadow(0 5px 3px #000);
 }
 
-.background-audio {
-  width: 100%;
-  height: 162px;
-  position: fixed;
-  z-index: 3;
-}
-
-#btnMute {
-  float: right;
-  top: 640px;
-  margin-right: 10px;
-  width: 54px;
-  height: 54px;
-  border-radius: 12px;
-  background-color: #f2d092;
-  position: relative;
-  z-index: 10;
-  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.67));
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s;
-  color: rgba(18, 61, 61, 1);
-}
-
-#btnMute i {
-  font-size: 36px;
-}
-
 .cta-container {
   width: 100%;
   display: flex;

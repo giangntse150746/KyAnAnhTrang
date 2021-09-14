@@ -40,9 +40,9 @@ function viewEkip() {
                     </div>
                     <div class="second-area">
                         <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)" onclick="triggerReveal(this)">
-                            <img id="HuongThanh" src="/source/about-us/ekip/individual/_mini-HuongThanh.png">
+                            <img id="Kaiken" src="/source/about-us/ekip/individual/_mini-Kaiken.png">
 							<span class="popup-text">
-                              Hương Thanh
+                              Kaiken
                             </span>
                         </div>
                         <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)" onclick="triggerReveal(this)">
@@ -89,6 +89,12 @@ function viewEkip() {
                             <img id="loser" src="/source/about-us/ekip/individual/_mini-loser.png">
 							<span class="popup-text">
                               Trường Giang
+                            </span>
+                        </div>
+                        <div class="popup" onmouseover="openPopUp(this)" onmouseout="closePopUp(this)" onclick="triggerReveal(this)">
+                            <img id="MinhPhuong" src="/source/about-us/ekip/individual/_mini-MinhPhuong.png" hidden>
+							<span class="popup-text">
+                              Minh Phương
                             </span>
                         </div>
                     </div>
@@ -433,13 +439,13 @@ const revealQuocPhong = `
     </div>
 `;
 
-const revealHuongThanh = `
+const revealKaiken = `
     <div class="left-side">
-        <img src="/source/about-us/ekip/individual/HuongThanh.png" alt="reveal-HuongThanh">
+        <img src="/source/about-us/ekip/individual/Kaiken.png" alt="reveal-Kaiken">
     </div>
     <div class="right-side">
         <h2>
-            Hương Thanh (KaiKen)
+            Kaiken
         </h2>
         <div class="bruh-line"></div>
         <p>
@@ -543,7 +549,7 @@ const revealMinhBach = `
 			một thời gian dài, Minh Bách đã thể hiện khả năng sáng tạo cùng tư duy thoại 
 			sắc bén khi đã chắp bút nên những câu thoại mang đạm chất trinh thám điển hình.
 			<br/>
-			Anh chàng cũng là người đóng vai trò quan trọng khi luôn hỗ trợ hết mình trong 
+			Anh cũng là người đóng vai trò quan trọng khi luôn hỗ trợ hết mình trong 
 			khâu sản xuất, dàn dựng phim.		
 		</p>
     </div>
@@ -608,8 +614,8 @@ function triggerReveal(previewContainer) {
         case "QuocPhong":
             reveal(revealQuocPhong);
             break;
-        case "HuongThanh":
-            reveal(revealHuongThanh);
+        case "Kaiken":
+            reveal(revealKaiken);
             break;
         case "ChanHung":
             reveal(revealChanHung);

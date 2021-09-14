@@ -116,7 +116,7 @@ a:hover {
 }
 
 .introdution .button a:active {
-  margin-top: 1.4vw;
+  margin-top: 4px;
 }
 
 .characters-preview img:hover {
@@ -213,6 +213,13 @@ a.effect-underline:hover:after {
 }
 
 #btnMute:hover {
+  cursor: pointer;
+  color: #f2d092;
+  background-color: rgba(18, 61, 61, 1);
+  transition: 0.5s;
+}
+
+#btnLight:hover {
   cursor: pointer;
   color: #f2d092;
   background-color: rgba(18, 61, 61, 1);

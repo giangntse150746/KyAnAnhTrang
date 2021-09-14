@@ -37,3 +37,24 @@ function viewTrailer() {
         }, 300);
     });
 }
+
+function turnTheLightOff() {
+  var lightContainer = document.getElementsByClassName("iframe-background")[0];
+  lightContainer.setAttribute('style', "filter: brightness(0.4)");
+  document.getElementsByClassName("background-light")[0].innerHTML = `
+    <div id="btnLight" onclick="turnTheLightOn()">
+      <i class="fa fa-eye-slash" aria-hidden="true"></i>
+    </div>
+  `;
+  
+}
+
+function turnTheLightOn() {
+  var lightContainer = document.getElementsByClassName("iframe-background")[0];
+  lightContainer.setAttribute('style', "filter: brightness(1)");
+  document.getElementsByClassName("background-light")[0].innerHTML = `
+    <div id="btnLight" onclick="turnTheLightOff()">
+      <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+    </div>
+  `;
+}
