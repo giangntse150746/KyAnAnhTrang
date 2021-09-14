@@ -9,7 +9,6 @@ function onLoadAlert() {
 }
 function askForSound() {
     swal({
-        title: "Welcome to Kỳ Án Ánh Trăng",
         text: "Bạn có muốn một chút nhạc?",
         button: "Of course!"
     })
