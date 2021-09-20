@@ -9,15 +9,27 @@ function onLoadAlert() {
 }
 function askForSound() {
     swal({
-        text: "Bạn có muốn một chút nhạc?",
-        button: "Tất nhiên rồi!"
+        text: "Bạn có muốn một chút nhạc không?",
+        buttons: {
+            yes: {
+                text: "Yuppp!",
+                value: true,
+            },
+            no: {
+                text: "Không, cảm ơn", 
+                value: false,
+            }
+        }
     })
     .then((value) => {
         playTheMusic();
         switch (value) {
+            case false:
+                offTheMusic();
+                break;
             default:
                 swal({
-                    text: "Cảm ơn đã ghé thăm trang web của chúng mình! Have fun ^^",
+                    text: "Cảm ơn bạn đã ghé thăm\ntrang web của\nPhim Ngắn: Kỳ Án Ánh Trăng",
                     button: "OK"
                 });
         }
@@ -77,7 +89,6 @@ function changeHeaderBar() {
             openChangePhone();
             closeBruh();
         } else {
-            closeSwal();
             switchToMenu();
         }
     } else if (windowsize <= 768) {
@@ -225,7 +236,8 @@ function openChangePhone() {
 }
 
 function closeSwal() {
-    swal.close();
+    if (swal)
+        swal.close();
 }
 
 /* Switch headerBar */
@@ -233,8 +245,8 @@ function switchToMenu() {
     document.getElementById("headerLink").style.visibility = "hidden";
     document.getElementById("headerMenu").style = `
         visibility: visible;
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
   `;
 }
 
@@ -328,4 +340,8 @@ function playTheMusic() {
             });
         }
     }, 100);
+}
+
+function offTheMusic() {
+    document.getElementById("bgAudio-container").innerHTML = ``;
 }

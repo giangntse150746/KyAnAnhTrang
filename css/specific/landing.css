@@ -26,12 +26,14 @@
   position: relative;
   z-index: 0;
   background-color: rgba(18, 61, 61, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .background-teaser img {
   width: 1920px;
-  height: 900px;
-  float: right;
+  height: auto;
   filter: brightness(60%);
 }
 
@@ -133,7 +135,7 @@
   font-size: large;
   line-height: 36px;
   font-size: 24px;
-  height: 360px;
+  height: 380px;
 }
 
 /* .landing-page::Third-part */
@@ -219,20 +221,24 @@
 
 .right-side p {
   text-align: justify;
-  line-height: 2em;
+  line-height: 42px;
   font-size: 24px;
 }
 
 .characters-preview {
-  width: 100%;
+  width: 80%;
   float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10%;
 }
 
 .characters-preview .first-area,
 .second-area {
-  width: 640px;
+  width: 80%;
   height: 160px;
-  margin-left: 34%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -290,15 +296,15 @@
 .awards .awards-image {
   margin-top: 20px;
   width: 80%;
-}
-
-.awards-image div {
-  width: 28%;
-  float: left;
-  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.awards-image div {
+  width: 24%;
+  float: left;
+  margin: 0;
 }
 
 .awards-image div:nth-of-type(2) {
@@ -352,5 +358,5 @@
 /* Footer */
 
 footer {
-  top: 4440px;
+  top: 4540px;
 }

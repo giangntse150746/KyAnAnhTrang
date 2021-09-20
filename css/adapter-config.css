@@ -96,10 +96,6 @@
   .quote p {
     font-size: 28px;
   }
-  .characters-preview .first-area,
-  .second-area {
-    margin-left: 30%;
-  }
   .character-reveal #reveal-none {
     width: 78%;
   }
@@ -130,10 +126,6 @@
     font-size: 42px;
   }
   /* landing */
-  .characters-preview .first-area,
-  .second-area {
-    margin-left: 27%;
-  }
   .inspire {
     padding-top: 36px;
   }
@@ -158,16 +150,53 @@
   .about-project-2 .image img {
     height: 720px;
   }
+  .text {
+    margin-top: 12px;
+  }
+  .about-project-3 .image {
+    height: 640px;
+  }
+  .about-project-3 .image img {
+    height: 540px;
+  }
+  .content .about-project-3 {
+    height: 2840px;
+  }
+  .cta-container {
+    padding-top: 64px;
+  }
+
+  /* about-movie */
+  .content-container .image {
+    transform: scale(1.2);
+  }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1024px) {
   /* Header */
   .header-kv {
-    width: 20%;
+    width: 12%;
     transition: 0.1s ease;
+    padding: 0;
+  }
+  .header-link {
+    width: 88%;
   }
   .header-link a {
+    width: 100%;
     transition: none;
+  }
+  .background-teaser {
+    height: 720px;
+  }
+  .background-teaser img {
+    height: 720px;
+  }
+  .kv-inspire img {
+    transform: scale(1.3);
+  }
+  .quote p {
+    font-size: 19px;
   }
   .introdution .surface-introduction {
     width: 40vw;
@@ -200,15 +229,71 @@
     width: 50%;
     margin: 0 25%;
   }
-  .characters-preview .first-area,
-  .second-area {
-    margin-left: 6%;
+  .character-reveal .right-side {
+    line-height: 10px;
   }
+
+  /* about-us */
+  .title {
+    right: 10%;
+  }
+  .about-meet .title {
+    margin-left: 260px;
+  }
+  .about-real .title {
+    margin-left: 540px;
+  }
+  .title a {
+    font-size: 27px;
+    margin-right: 0;
+    width: 240px;
+  }
+  .about-real .title a {
+    width: 200px;
+  }
+  .content .content-container {
+      height: 720px;
+  }
+  .image img {
+    height: 540px;
+    margin-top: 0;
+  }
+  .ekip-preview {
+    margin-top: 64px;
+  }
+  .ekip-reveal {
+    flex-direction: column;
+  }
+  .ekip-reveal .left-side img {
+    width: 80%;
+    float: left;
+  }
+  .ekip-reveal .left-side { 
+    margin-bottom: 0;
+    height: auto;
+  }
+  .ekip-reveal .right-side {
+    width: 90%;
+    float: left;
+    padding-left: 60px;
+  }
+  .ekip-reveal .right-side p {
+    line-height: 28px;
+    height: 120px;
+    overflow: auto;
+  }
+
+  .content-container .image img {
+    width: 720px;
+    height: auto;
+    margin-top: 60px;
+  }
+
 }
 
 /* Surface Duo */
-
-@media only screen and (max-width: 540px) {
+/*
+@media all and (max-width: 540px) {
   body {
     width: 540px;
     float: none;
@@ -223,7 +308,7 @@
     width: 540px;
     font-size: medium;
   }
-}
+} */
 
 /* Iphone 6,7,8 plus */
 
@@ -241,6 +326,36 @@
   footer {
     width: 414px;
     font-size: smaller;
+  }
+  /* landing */
+  .introdution .surface-introduction {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .introdution .surface-introduction {
+    height: 360px;
+  }
+  .surface-introduction .text h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .surface-introduction .text p {
+    margin-top: 48px;
+    width: 60%;
+  }
+  .surface-introduction .text {
+    height: 240px;
+  }
+  .surface-introduction .button {
+    margin-top: 24px;
+  }
+  .surface-introduction .button a {
+    width: 160px;
+    height: 54px;
+    font-size: 18px;
   }
 }
 

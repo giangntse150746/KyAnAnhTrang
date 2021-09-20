@@ -46,7 +46,7 @@ a {
 header {
   width: 100%;
   float: left;
-  height: 70px;
+  height: 60px;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -67,11 +67,11 @@ header {
 .header-kv {
   width: 10%;
   float: left;
-  height: 70px;
+  height: 60px;
 }
 
 .header-kv img {
-  width: 70px;
+  width: 60px;
   float: left;
   margin: 2px 0 0 20px;
   z-index: 100;
@@ -134,12 +134,16 @@ header {
   z-index: 100;
 }
 
+.header-menu span {
+  margin-top: -2px;
+  position: absolute;
+}
+
 .header-menu img {
   width: 100%;
   float: right;
   position: relative;
-  margin: 0 20% 0 0;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .header-link {
@@ -169,7 +173,7 @@ header {
   font-size: 1.2vw;
   font-weight: 400;
   transition: 0.2s ease;
-  padding-top: 22px;
+  padding-top: 18px;
 }
 
 .bruh-line {

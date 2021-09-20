@@ -92,14 +92,14 @@ a:hover {
 .header-link a:hover {
   color: #ffffff;
   text-shadow: 2px 2px 5px rgba(242, 208, 146, 1);
-  padding-top: 20px;
+  padding-top: 16px;
   transition: 0.3s ease;
 }
 
 .header-link a:active {
   text-shadow: none;
   color: rgba(242, 208, 146, 1);
-  padding-top: 24px;
+  padding-top: 20px;
   transition: 0.2s;
 }
 
