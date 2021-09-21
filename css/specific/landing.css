@@ -108,13 +108,18 @@
   height: 640px;
   width: 100%;
   float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .inspire .kv-inspire {
   width: 40%;
   float: left;
-  margin-left: 10%;
   margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .inspire .kv-inspire img {
@@ -127,7 +132,6 @@
   width: 40%;
   float: left;
   height: 480px;
-  margin-right: 10%;
   margin-top: 2%;
 }
 
@@ -210,6 +214,9 @@
   float: left;
   margin-left: 2%;
   margin-right: 4%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .right-side h2 {
@@ -247,6 +254,7 @@
 
 .first-area div {
   width: 160px;
+  height: auto;
   float: left;
   display: flex;
   justify-content: center;
@@ -255,6 +263,7 @@
 
 .second-area div {
   width: 160px;
+  height: auto;
   float: left;
   display: flex;
   justify-content: center;
@@ -292,7 +301,9 @@
   font-size: 24px;
   line-height: 32px;
 }
-
+.awards-overview p {
+  text-align: justify;
+}
 .awards .awards-image {
   margin-top: 20px;
   width: 80%;

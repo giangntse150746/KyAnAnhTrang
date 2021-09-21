@@ -99,7 +99,7 @@
   .character-reveal #reveal-none {
     width: 78%;
   }
-  #characterInfo .right-side p {
+  .character-reveal .right-side p {
     font-size: 22px;
     line-height: 36px;
   }
@@ -132,7 +132,7 @@
   .quote p {
     font-size: 26px;
   }
-  #characterInfo .right-side p {
+  .character-reveal .right-side p {
     font-size: 19px;
     line-height: 36px;
   }
@@ -323,9 +323,21 @@
   .landing-page {
     width: 414px;
   }
+  .bruh-line {
+    width: 60px;
+    height: 3px;
+  }
+  .awards .bruh-line {
+    width: 60px;
+    height: 3px;
+  }
   footer {
     width: 414px;
+    top: 4280px;
     font-size: smaller;
+  }
+  p {
+    font-size: 12px;
   }
   /* landing */
   .introdution .surface-introduction {
@@ -339,12 +351,13 @@
     height: 360px;
   }
   .surface-introduction .text h1 {
-    font-size: 28px;
+    font-size: 32px;
     text-align: center;
   }
   .surface-introduction .text p {
     margin-top: 48px;
-    width: 60%;
+    width: 68%;
+    line-height: 24px;
   }
   .surface-introduction .text {
     height: 240px;
@@ -355,7 +368,97 @@
   .surface-introduction .button a {
     width: 160px;
     height: 54px;
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .inspire {
+    flex-direction: column;
+  }
+  .inspire .kv-inspire {
+    width: 80%;
+    margin-top: 0;
+  }
+  .inspire .text-inspire {
+    margin-top: 24px;
+    width: 80%;
+  }
+  .text-inspire h1 {
+    font-size: 24px;
+  }
+  .inspire .text-inspire p {
+    font-size: 14px;
+    
+    line-height: 24px;
+  }
+  .quote img {
+    height: 720px;
+    width: auto;
+    float: right;
+  }
+  .quote p {
+    font-size: 20px;
+    line-height: 36px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 480px;
+  }
+  .character-reveal {
+    width: 100%;
+    height: 420px;
+    margin: 0;
+    border: 0;
+  }
+  .character-reveal .left-side {
+    width: 50%;
+    margin: 0;
+  }
+  .character-reveal .right-side h2 {
+    font-size: 15px;
+    line-height: 42px;
+    margin-bottom: 0;
+  }
+  .character-reveal .right-side p {
+    height: 240px;
+    overflow: auto;
+    font-size: 13.5px;
+    line-height: 24px;
+  }
+  .characters-preview {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .characters-preview .first-area, .characters-preview .second-area {
+    width: 90%;
+    height: auto;
+    margin: 12px;
+  }
+  .characters-preview .first-area img, 
+  .characters-preview .second-area img {
+    width: 72px;
+    height: auto;
+  }
+  .awards-overview p, .awards-describe p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .characters {
+    height: 720px;
+  }
+  .awards .awards-overview h1 {
+    font-size: 24px;
+  }
+  .awards-image {
+    flex-direction: column;
+  }
+  .awards-image div:nth-of-type(2) {
+    margin: 0;
+    margin-bottom: 12px;
+  }
+  .awards-image div {
+    width: 80%;
+    margin-bottom: 12px;
+  }
+  .cta-container {
+    padding-top: 420px;
   }
 }
 
