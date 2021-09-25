@@ -434,7 +434,7 @@
   .characters-preview .first-area img, 
   .characters-preview .second-area img {
     width: 72px;
-    height: auto;
+    height: 72px;
   }
   .awards-overview p, .awards-describe p {
     font-size: 14px;
