@@ -173,7 +173,10 @@ header {
   font-size: 1.2vw;
   font-weight: 400;
   transition: 0.2s ease;
-  padding-top: 18px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bruh-line {
@@ -181,6 +184,10 @@ header {
   height: 5px;
   margin: 0;
   background-color: #f2d092;
+}
+
+.title {
+  text-transform: uppercase;
 }
 
 /* Up-to-top Button */

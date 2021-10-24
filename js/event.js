@@ -205,6 +205,9 @@ function openBruh() {
           Ngưng thu nhỏ cái màn hình lại giúp tui.<br/>
           Trò này hong có vui đâu!!!
         </p>
+        <p hidden>
+          Bạn cút cmn đi :)
+        </p>
   `;
     document.getElementById("bruh").style.width = "100%";
 }

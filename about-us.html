@@ -115,7 +115,8 @@
             </div>
             <div class="footer-copyright">
                 <p>
-                    ©2021 LƯU LY SẢN XUẤT ĐỘI. ALL RIGHTS RESERVED<br/> All trademarks referenced herein are the properties of their respective owners.
+                    ©2021 LƯU LY SẢN XUẤT ĐỘI. ALL RIGHTS RESERVED<br /> All trademarks referenced herein are the
+                    properties of their respective owners.
                 </p>
             </div>
         </div>
@@ -134,6 +135,10 @@
             viewEkip();
         } else if (view[1] == "project") {
             viewProject();
+            if (window.innerWidth <= 1024)
+                document.getElementsByTagName('footer')[0].style.top = '6200px';
+            else if (window.innerWidth <= 720)
+                document.getElementsByTagName('footer')[0].style.top = '6000px';
         } else
             wrongParam();
     } else
@@ -144,8 +149,5 @@
         location.origin += '/404.html';
     }
 </script>
-<style>
-    
-</style>
 
 </html>

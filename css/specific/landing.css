@@ -116,29 +116,31 @@
 .inspire .kv-inspire {
   width: 40%;
   float: left;
-  margin-top: 36px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .inspire .kv-inspire img {
-  width: 60%;
+  width: 66%;
   float: left;
-  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.67));
+  margin-top: -64px;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.4));
 }
 
 .inspire .text-inspire {
   width: 40%;
   float: left;
   height: 480px;
-  margin-top: 2%;
+}
+.text-inspire h1 {
+  margin-top: 0;
 }
 
-.inspire .text-inspire p {
+.text-inspire p {
   font-size: large;
-  line-height: 36px;
-  font-size: 24px;
+  line-height: 32px;
+  font-size: 18px;
   height: 380px;
 }
 
@@ -191,7 +193,7 @@
 }
 
 .character-reveal #reveal-none {
-  width: 100%;
+  width: 66%;
   text-align: center;
 }
 
@@ -222,14 +224,14 @@
 .right-side h2 {
   color: #f2d092;
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bolder;
 }
 
 .right-side p {
   text-align: justify;
   line-height: 42px;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .characters-preview {
@@ -281,7 +283,7 @@
 .awards {
   width: 100%;
   float: left;
-  height: 900px;
+  height: 780px;
   position: relative;
 }
 
@@ -298,7 +300,7 @@
 
 .awards p {
   width: 100%;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 32px;
 }
 .awards-overview p {
@@ -313,13 +315,13 @@
 }
 
 .awards-image div {
-  width: 24%;
+  width: 30%;
   float: left;
   margin: 0;
 }
 
 .awards-image div:nth-of-type(2) {
-  margin: 0 8%;
+  margin: 0 16%;
 }
 
 .awards-image div img {
@@ -369,5 +371,5 @@
 /* Footer */
 
 footer {
-  top: 4540px;
+  top: 4400px;
 }

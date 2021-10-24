@@ -93,6 +93,9 @@
   .kv-inspire img {
     margin-top: 64px;
   }
+  .text-inspire p {
+    height: 440px;
+  }
   .quote p {
     font-size: 28px;
   }
@@ -192,8 +195,16 @@
   .background-teaser img {
     height: 720px;
   }
+  .inspire {
+    padding: 0;
+  }
   .kv-inspire img {
     transform: scale(1.3);
+  }
+  .text-inspire p {
+    height: 360px;
+    font-size: 18px;
+    line-height: 32px;
   }
   .quote p {
     font-size: 19px;
@@ -211,7 +222,7 @@
     color: #f2d092;
   }
   .surface-introduction .text p {
-    line-height: 18px;
+    line-height: 24px;
     font-weight: 450;
     font-size: 16px;
     transition: 0.5s ease;
@@ -225,15 +236,35 @@
     border-radius: 10vw;
     transition: 0.3s ease;
   }
+  .left-side {
+    width: 36%;
+  }
+  .right-side {
+    width: 54%;
+  }
   .footer-icon {
     width: 50%;
     margin: 0 25%;
   }
-  .character-reveal .right-side {
-    line-height: 10px;
+  .character-reveal .right-side p {
+    font-size: 15.5px;
+    line-height: 26px;
+  }
+  .awards {
+    height: 720px;
+  }
+  .awards p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .cta-container {
+    padding: 0;
   }
 
   /* about-us */
+  .content p {
+    font-size: 16px;
+  }
   .title {
     right: 10%;
   }
@@ -259,7 +290,7 @@
     margin-top: 0;
   }
   .ekip-preview {
-    margin-top: 64px;
+    margin-top: 120px;
   }
   .ekip-reveal {
     flex-direction: column;
@@ -279,16 +310,70 @@
   }
   .ekip-reveal .right-side p {
     line-height: 28px;
-    height: 120px;
+    height: 260px;
     overflow: auto;
   }
-
+  #ekipInfo {
+    margin-bottom: 0;
+    padding-top: 36px;
+  }
+  .ekip-reveal #reveal-none {
+    width: 96%;
+    padding-top: 0;
+  }
+  .title a {
+    font-size: 28px;
+  }
+  .about-us .title a {
+    font-size: 40px;
+  }
   .content-container .image img {
     width: 720px;
     height: auto;
     margin-top: 60px;
   }
+  .about-project .image {
+    width: 100%;
+    height: auto;
+  }
+  .image video {
+    margin-top: 0;
+    width: 100%;
+  }
+  .about-project .about-project-1 {
+    height: 960px;
+  }
+  .about-project .about-project-2 {
+    height: 1160px;
+  }
+  .about-project .image img{
+    width: 100%;
+    height: auto;
+  }
+  .about-project-2 .image img{
+    width: auto;
+    height: 720px;
+  }
+  .content .about-project-3 {
+    height: 2540px;
+  }
+  .about-project-3 .image img {
+    height: auto;  
+    width: 90%;
+  }
+  .about-project-3 .extra-text-1 {
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
+  .content .about-project-4 {
+    height: 1200px;
+  }
 
+  .iframe-container .button {
+    width: 20vw;
+    height: 6vw;
+    left: 40vw;
+  }
 }
 
 /* Surface Duo */
@@ -372,10 +457,10 @@
   }
   .inspire {
     flex-direction: column;
+    padding-top: 80px;
   }
   .inspire .kv-inspire {
     width: 80%;
-    margin-top: 0;
   }
   .inspire .text-inspire {
     margin-top: 24px;
