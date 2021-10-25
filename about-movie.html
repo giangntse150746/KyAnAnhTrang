@@ -115,7 +115,8 @@
             </div>
             <div class="footer-copyright">
                 <p>
-                    ©2021 LƯU LY SẢN XUẤT ĐỘI. ALL RIGHTS RESERVED<br/> All trademarks referenced herein are the properties of their respective owners.
+                    ©2021 LƯU LY SẢN XUẤT ĐỘI. ALL RIGHTS RESERVED<br /> All trademarks referenced herein are the
+                    properties of their respective owners.
                 </p>
             </div>
         </div>
@@ -128,23 +129,33 @@
 <script src="js/event.js"></script>
 <script>
     var firstParam = new Array(getParameters(getCurrentLocation()))[0];
-    if (firstParam != null) {
-        var view = new String(firstParam).split("=");
-        if (view[1] == "curse") {
-            viewCurse();
-        } else if (view[1] == "meet") {
-            viewMeet();
-        } else if (view[1] == "real") {
-            viewReal();
-        } else {
+    if (window.innerWidth <= 540) {
+        viewAIOP();
+    }
+    else {
+        if (firstParam != null) {
+            var view = new String(firstParam).split("=");
+            if (view[1] == "curse") {
+                viewCurse();
+            } else if (view[1] == "meet") {
+                viewMeet();
+            } else if (view[1] == "real") {
+                viewReal();
+            } else {
+                wrongParam();
+            }
+        } else
             wrongParam();
-        }
-    } else
-        wrongParam();
-
+    }
     function wrongParam() {
         alert("Wrong parameter!!!");
         location.href = location.origin + '/404.html';
     }
+</script>
+<script>
+    if (window.innerWidth <= 414 && window.innerHeight <= 812) //414 * 812||736
+        document.getElementsByTagName('footer')[0].style.top = '1960px';
+    else if (window.innerWidth <= 720) //720*...
+        document.getElementsByTagName('footer')[0].style.top = '1096px';
 </script>
 </html>

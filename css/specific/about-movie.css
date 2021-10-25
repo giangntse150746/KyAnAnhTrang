@@ -46,7 +46,6 @@ a {
 /* .about-movie::First-part */
 
 .about-curse {
-    width: 80%;
     position: absolute;
     display: block;
     box-sizing: border-box;
@@ -76,7 +75,6 @@ a {
 /* .about-movie::Second-part */
 
 .about-meet {
-    width: 80%;
     position: absolute;
     display: block;
     box-sizing: border-box;
@@ -92,7 +90,6 @@ a {
 /* .about-movie::Third-part */
 
 .about-real {
-    width: 80%;
     position: absolute;
     display: block;
     box-sizing: border-box;
@@ -103,6 +100,16 @@ a {
 
 .about-real .title {
     margin-left: 660px;
+}
+
+/* all */
+.about-all {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    left: 10%;
+    right: 10%;
+    top: 120px;
 }
 
 .image {

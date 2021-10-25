@@ -208,7 +208,7 @@ header {
   float: right;
   margin-right: 10px;
   position: relative;
-  top: 840px;
+  top: 90vh;
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
@@ -355,6 +355,10 @@ header {
   font-size: 24px;
 }
 
+.text h2 {
+  text-align: left;
+}
+
 .text-justify {
   text-align: justify;
 }
@@ -375,11 +379,10 @@ header {
 
 .chat-with-us img {
   width: 60px;
+  height: auto;
   float: right;
   position: relative;
-  border-radius: 5px;
-  position: relative;
-  top: 740px;
+  top: 78vh;
   margin: 10px 5px 0 0;
   transition: 0.3s;
   filter: drop-shadow(0 5px 3px #000);

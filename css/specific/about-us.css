@@ -267,6 +267,7 @@ video {
   width: 60%;
   float: left;
   text-align: center;
+  font-style: italic;
   margin-left: 20%;
   margin-top: -20px;
 }

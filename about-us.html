@@ -133,12 +133,20 @@
         var view = new String(firstParam).split("=");
         if (view[1] == "ekip") {
             viewEkip();
-        } else if (view[1] == "project") {
-            viewProject();
-            if (window.innerWidth <= 1024)
-                document.getElementsByTagName('footer')[0].style.top = '6200px';
+            if (window.innerWidth <= 414)
+                document.getElementsByTagName('footer')[0].style.top = '4400px';
             else if (window.innerWidth <= 720)
                 document.getElementsByTagName('footer')[0].style.top = '6000px';
+            else if (window.innerWidth <= 1024)
+                document.getElementsByTagName('footer')[0].style.top = '6200px';
+        } else if (view[1] == "project") {
+            viewProject();
+            if (window.innerWidth <= 414)
+                document.getElementsByTagName('footer')[0].style.top = '4400px';
+            else if (window.innerWidth <= 720)
+                document.getElementsByTagName('footer')[0].style.top = '6000px';
+            else if (window.innerWidth <= 1024)
+                document.getElementsByTagName('footer')[0].style.top = '6200px';
         } else
             wrongParam();
     } else

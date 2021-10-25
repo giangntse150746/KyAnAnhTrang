@@ -21,15 +21,6 @@
     <link rel="stylesheet" type="text/css" href="CSS/animation.css">
     <link rel="stylesheet" type="text/css" href="CSS/adapter-config.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <style>
-        body {
-            height: 937px;
-        }
-        
-        footer {
-            top: 938px;
-        }
-    </style>
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -132,7 +123,8 @@
         </div>
         <div class="footer-copyright">
             <p>
-                ©2021 LƯU LY SẢN XUẤT ĐỘI. ALL RIGHTS RESERVED<br/> All trademarks referenced herein are the properties of their respective owners.
+                ©2021 LƯU LY SẢN XUẤT ĐỘI. ALL RIGHTS RESERVED<br /> All trademarks referenced herein are the properties
+                of their respective owners.
             </p>
         </div>
     </footer>
@@ -166,19 +158,19 @@
             alert("Wrong parameter!!!");
         }
 
-        $(document).ready(function() {
-            $('#switchIframeButton').click(function() {
-                setTimeout(function() {}, 500);
+        $(document).ready(function () {
+            $('#switchIframeButton').click(function () {
+                setTimeout(function () { }, 500);
             });
         });
     }
-
-    if (window.innerWidth <= 1024)
-        document.getElementsByTagName('footer')[0].style.top = '1096px';
-    else if (window.innerWidth <= 720)
-        document.getElementsByTagName('footer')[0].style.top = '754‬px';
 </script>
-
+<script>
+    if (window.innerWidth <= 414 && window.innerHeight <= 736) //414*736
+        document.getElementsByTagName('footer')[0].style.top = '736px';
+    else if (window.innerWidth <= 720) //720*...
+        document.getElementsByTagName('footer')[0].style.top = '800px';
+    else if (window.innerWidth <= 1024) //1024*1366
+        document.getElementsByTagName('footer')[0].style.top = '1096px';
+</script>
 </html>
-
-<!--READY-->

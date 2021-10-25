@@ -189,6 +189,12 @@
     width: 100%;
     transition: none;
   }
+  .chat-with-us img:hover {
+    transform: none;
+  }
+  .chat-with-us img:active {
+    transform: none;
+  }
   .background-teaser {
     height: 720px;
   }
@@ -197,6 +203,7 @@
   }
   .inspire {
     padding: 0;
+    margin: 0;
   }
   .kv-inspire img {
     transform: scale(1.3);
@@ -320,6 +327,7 @@
   .ekip-reveal #reveal-none {
     width: 96%;
     padding-top: 0;
+    margin-top: -120px;
   }
   .title a {
     font-size: 28px;
@@ -339,6 +347,8 @@
   .image video {
     margin-top: 0;
     width: 100%;
+    height: auto;
+    margin-top: 36px;
   }
   .about-project .about-project-1 {
     height: 960px;
@@ -361,6 +371,11 @@
     height: auto;  
     width: 90%;
   }
+  .about-project-3 .extra-text {
+    font-size: 10px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
   .about-project-3 .extra-text-1 {
     margin-top: 12px;
     margin-bottom: 24px;
@@ -374,8 +389,77 @@
     height: 6vw;
     left: 40vw;
   }
+  .iframe-container .button a {
+    font-size: 24px;
+  }
+  
+  @media all and (max-height: 768px) {
+    .iframe-container div:nth-of-type(1) {
+      height: 88%;
+      width: 84%;
+      left: 8%;
+    }
+  }
 }
 
+/***************************************************************************/
+
+/* IPad */
+@media only screen and (max-width: 768px) {
+  .title a {
+    right: 0;
+    width: 200px;
+    font-size: 24px;
+  }
+
+  .inspire .kv-inspire img {
+    margin-left: -36px;
+  }
+
+  /* landing */
+  .introdution .surface-introduction {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .introdution .surface-introduction {
+    height: 360px;
+  }
+  .surface-introduction .text h1 {
+    font-size: 42px;
+    text-align: center;
+    margin-top: 0%;
+  }
+  .surface-introduction .text p {
+    margin-top: 48px;
+    width: 68%;
+    line-height: 26px;
+  }
+  .surface-introduction .text {
+    height: 200px;
+  }
+  .surface-introduction .button {
+    margin-top: 0;
+  }
+  .surface-introduction .button a {
+    width: 160px;
+    height: 54px;
+    font-size: 16px;
+  }
+  .background-teaser img {
+    transform: translate(-100px, 0);
+  }
+  /* about-movie */
+  .about-meet .title {
+    margin-left: 200px;
+  }
+  .about-real .title {
+    margin-left: 420px;
+  }
+
+}
 /* Surface Duo */
 /*
 @media all and (max-width: 540px) {
@@ -393,10 +477,10 @@
     width: 540px;
     font-size: medium;
   }
-} */
+}
+*/
 
 /* Iphone 6,7,8 plus */
-
 @media only screen and (max-width: 414px) {
   body {
     width: 414px;
@@ -404,6 +488,35 @@
   }
   header {
     width: 414px;
+  }
+  footer {
+    width: 414px;
+    font-size: smaller;
+  }
+  #btnLight, #btnMute {
+    top: 72vh;
+  }
+  .chat-with-us img, #btnLight, .up-to-top a, #btnMute {
+    transform: scale(0.6);
+    margin-right: 0;
+    right: 0;
+    padding: 0;
+  }
+  #topButton {
+    margin-right: 0;
+  }
+  .chat-with-us img {
+    margin-right: -5px;
+  }
+  .chat-with-us img:hover {
+    transform: none;
+  }
+  .chat-with-us img:active {
+    transform: none;
+  }
+  .overlay-content a {
+    width: 90%;
+    margin: 30px 5%;
   }
   .landing-page {
     width: 414px;
@@ -415,11 +528,6 @@
   .awards .bruh-line {
     width: 60px;
     height: 3px;
-  }
-  footer {
-    width: 414px;
-    top: 4280px;
-    font-size: smaller;
   }
   p {
     font-size: 12px;
@@ -455,12 +563,18 @@
     height: 54px;
     font-size: 16px;
   }
+  .background-teaser img {
+    height: 800px;
+  }
   .inspire {
     flex-direction: column;
-    padding-top: 80px;
+    margin-top: 160px;
   }
   .inspire .kv-inspire {
     width: 80%;
+  }
+  .inspire .kv-inspire img {
+    margin-left: 0;
   }
   .inspire .text-inspire {
     margin-top: 24px;
@@ -478,6 +592,7 @@
     height: 720px;
     width: auto;
     float: right;
+    transform: translate(480px, 0);
   }
   .quote p {
     font-size: 20px;
@@ -487,10 +602,17 @@
     margin-top: 480px;
   }
   .character-reveal {
-    width: 100%;
-    height: 420px;
-    margin: 0;
-    border: 0;
+    width: 96%;
+    height: 360px;
+    margin: 15% 2% 6% 2%;
+  }
+  .h3 {
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 16px;
+  }
+  .display-1 {
+    font-size: 24px;
   }
   .character-reveal .left-side {
     width: 50%;
@@ -505,7 +627,10 @@
     height: 240px;
     overflow: auto;
     font-size: 13.5px;
-    line-height: 24px;
+    line-height: 22px;
+  }
+  .popup-text {
+    transform: scale(0);
   }
   .characters-preview {
     width: 90%;
@@ -528,28 +653,194 @@
   .characters {
     height: 720px;
   }
+  .awards {
+    height: 900px;
+  }
   .awards .awards-overview h1 {
     font-size: 24px;
   }
   .awards-image {
     flex-direction: column;
+    transform: scale(0.8) translate(0, -80px);
   }
   .awards-image div:nth-of-type(2) {
     margin: 0;
-    margin-bottom: 12px;
+    margin-bottom: 48px;
   }
   .awards-image div {
     width: 80%;
-    margin-bottom: 12px;
+    margin-bottom: 48px;
+  }
+  .awards-describe {
+    transform: translate(0, -160px);
   }
   .cta-container {
-    padding-top: 420px;
+    padding-top: 360px;
+  }
+  .characters #reveal-none {
+    width: 60%;
+  }
+  .characters #reveal-none .display-1 {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .characters #reveal-none .h3 {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  /* film/trailer view */
+  .iframe-container {
+    height: 100%;
+  }
+  .iframe-container div:nth-of-type(1) {
+    height: 88%;
+  }
+  .iframe-container .button {
+    width: 26vw;
+    height: 10vw;
+    left: 37vw;
+    top: 580px;
+  }
+  .iframe-container .button a {
+    font-size: 3vw !important;
+  }
+  .iframe-container .iframe-view  iframe {
+    top: 0;
+    height: 360px;
+  }
+
+  /* about-us */
+  .about-us .title a {
+    width: 160px;
+    font-size: 28px;
+  }
+  .about-us .title {
+    height: 60px;
+  }
+  .about-project .title {
+    margin-left: 180px;
+  }
+  .content .about-ekip-1 {
+    height: 680px;
+  }
+  .content .about-ekip-2, .about-ekip-3 {
+    height: 640px;
+  }
+  .content .about-ekip-4, .about-ekip-5, .about-ekip-6 {
+    height: 680px;
+  }
+  .ekip-preview {
+    width: 40%;
+    margin-top: 60px;
+    height: 320px;
+  }
+  .ekip-reveal {
+    width: 60%;
+    height: 400px;
+  }
+  #ekipInfo {
+    padding: 0;
+  }
+  .ekip-reveal .left-side img {
+    width: 120px;
+  }
+  .ekip-reveal .right-side h2 {
+    font-size: 20px;
+  }
+  .ekip-reveal .right-side {
+    padding-left: 12px;
+    text-align: center;
+  }
+  .ekip-reveal .right-side .bruh-line {
+    margin-left: 32%;
+  }
+  .ekip-reveal .right-side p {
+    font-size: 11.2px;
+    line-height: 19px;
+    height: 180px;
+  }
+  .ekip-reveal #reveal-none {
+    width: 90%;
+    margin-top: -40px;
+  }
+  #reveal-none p {
+    padding: 0;
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .about-us .image img {
+    height: 270px;
+  }
+  .text h2 {
+    margin: 12px 0;
+    font-size: 20px;
+  }
+  .image {
+    height: auto;
+  }
+  .about-ekip-1 .popup-text {
+    transform: scale(0);
+  }
+  .about-project .about-project-1 {
+    height: 640px;
+  }
+  .about-project .about-project-2 {
+    height: 880px;
+  }
+  .content .about-project-3 {
+    height: 1840px;
+  }
+  .content .about-project-4 {
+    height: 680px;
+  }
+  .about-project .image img {
+    width: 100%;
+    height: auto;
+    margin-top: 12px;
+  }
+  .about-project .extra-text, .about-project .extra-text-1 {
+    width: 90%;
+    margin: 0 5%;
+  }
+  .about-project .extra-text p, .about-project .extra-text-1 p {
+    font-size: 10px;
+  }
+  .about-project .cta-container {
+    padding-top: 0;
+  }
+
+  /* about-movie */
+  .content p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .about-all .image img {
+    width: 460px;
+    height: auto;
+    margin: 24px;
+  }
+  .content .content-container {
+    height: 640px;
+  }
+  .content .content-container:nth-of-type(1) {
+    height: 560px;
+    margin-top: 20px;
+  }
+  .content-container .text h2 {
+    font-size: 17px;
   }
 }
 
 /* Iphone 6,7,8 */
 
 @media only screen and (max-width: 375px) {
+  .chat-with-us img:hover {
+    transform: none;
+  }
+  .chat-with-us img:active {
+    transform: none;
+  }
   body {
     width: 375px;
     float: none;

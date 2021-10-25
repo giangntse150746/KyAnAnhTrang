@@ -305,9 +305,12 @@
 
 <script src="js/event.js"></script>
 <script>
-    if (window.innerWidth <= 1024)
-        document.getElementsByTagName('footer')[0].style.top = '3800px';
+    if (window.innerWidth <= 414) {
+        document.getElementsByTagName('footer')[0].style.top = '4380px';
+    }
     else if (window.innerWidth <= 720)
+        document.getElementsByTagName('footer')[0].style.top = '4150px';
+    else if (window.innerWidth <= 1024)
         document.getElementsByTagName('footer')[0].style.top = '3800px';
 </script>
 </html>
