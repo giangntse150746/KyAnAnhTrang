@@ -219,6 +219,11 @@ function viewEkip() {
         </div>
     </div>
   `;
+  if (innerWidth <= 414) {
+      $('#reveal-none>p')[0].innerHTML = `
+        chúng mình sẽ cho bạn biết thêm một số thông tin thú vị...
+      `;
+  }
 }
 
 function viewProject() {

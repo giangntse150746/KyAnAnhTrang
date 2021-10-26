@@ -133,7 +133,10 @@
         var view = new String(firstParam).split("=");
         if (view[1] == "ekip") {
             viewEkip();
-            if (window.innerWidth <= 414)
+            if (window.innerWidth <= 375) {
+                document.getElementsByTagName('footer')[0].style.top = '3960px';
+            }
+            else if (window.innerWidth <= 414)
                 document.getElementsByTagName('footer')[0].style.top = '4400px';
             else if (window.innerWidth <= 720)
                 document.getElementsByTagName('footer')[0].style.top = '6000px';
@@ -141,8 +144,10 @@
                 document.getElementsByTagName('footer')[0].style.top = '6200px';
         } else if (view[1] == "project") {
             viewProject();
-            if (window.innerWidth <= 414)
+            if (window.innerWidth <= 375)
                 document.getElementsByTagName('footer')[0].style.top = '4400px';
+            else if (window.innerWidth <= 414)
+                document.getElementsByTagName('footer')[0].style.top = '4440px';
             else if (window.innerWidth <= 720)
                 document.getElementsByTagName('footer')[0].style.top = '6000px';
             else if (window.innerWidth <= 1024)
